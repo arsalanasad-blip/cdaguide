@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CDA Plot Design Calculator — Sector Houses &amp; Unplanned Areas</title>
+<title>CDA Plot Design Calculator — Islamabad Residential Construction Rules</title>
+<meta name="description" content="Free CDA plot design calculator: enter any Islamabad plot size to get its Schedule-1 rule row, setbacks, covered area, mumty & porch allowances and a scaled diagram under ICT Building Control Regulations 2020.">
+<meta name="keywords" content="CDA plot calculator, CDA Islamabad, covered area calculator, setbacks, mumty rule, Schedule-1, residential construction rules">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CDA Plot Design Calculator — Islamabad Residential Construction Rules">
+<meta property="og:description" content="Instant rule row, setbacks, covered area, mumty, porch + scaled diagram for any CDA sector or unplanned-area plot.">
+<meta name="theme-color" content="#073d2a">
 <style>
   :root{--green:#0b5c3f;--green-dark:#073d2a;--green-light:#e7f4ec;--gold:#c9a227;
     --gold-light:#faf3dd;--ink:#1c2420;--muted:#5b6b62;--line:#d9e4dc;
@@ -55,6 +61,9 @@
   #results{display:none}
   footer{background:var(--green-dark);color:#cfe3d8;padding:26px 40px;font-size:13.5px}
   footer a{color:var(--gold)}
+  .credit{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);text-align:center;font-size:14px}
+  .credit a{color:var(--gold);font-weight:700;text-decoration:none}
+  .credit a:hover{text-decoration:underline}
   @media(max-width:700px){.grid{grid-template-columns:1fr}.content{padding:18px}.cover{padding:30px 20px}}
   @media print{body{background:#fff}.page{box-shadow:none}.noprint{display:none}#results{display:block!important}}
   /* ---- Cross-navigation UX: sticky bar, guide chips, CTA ---- */
@@ -100,15 +109,15 @@
   <button class="printlink" onclick="window.print()">🖨 Print</button>
 </nav>
 <div class="cover">
-  <h1>📐 CDA Plot <span>Design Calculator</span></h1>
-  <p>Enter your plot dimensions to instantly get the applicable Schedule-1 row, setbacks, buildable block, covered area, mumty &amp; porch allowances, units, and a scaled plot diagram — for <b>CDA sector houses</b> and <b>unplanned houses (Zone II / IV / V)</b>.</p>
+  <h1>📐 CDA Islamabad Plot <span>Design Calculator</span></h1>
+  <p>Enter your plot dimensions to instantly get the applicable Schedule-1 row, setbacks, buildable block, covered area, mumty &amp; porch allowances, units, and a scaled plot diagram — for <b>CDA sector houses</b> and <b>unplanned houses (Zone II / IV / V)</b> — per the CDA Islamabad residential construction rules.</p>
 </div>
 <div class="content">
 
-<h2 style="border:none;padding:0;margin-top:6px">1 · Enter your plot</h2>
+<h2 style="border:none;padding:0;margin-top:6px">1 · Enter your CDA plot details</h2>
 <div class="grid">
   <div class="panel">
-    <h3>Plot details</h3>
+    <h3>Plot details — size, zone &amp; development type</h3>
     <label for="zone">Area type</label>
     <select id="zone" onchange="zoneChange()">
       <option value="sector">CDA sector / planned area (Schedule-1)</option>
@@ -139,7 +148,7 @@
     </div>
   </div>
   <div class="panel">
-    <h3>Site conditions</h3>
+    <h3>Site conditions — corner, open side &amp; basement</h3>
     <div class="chk"><input type="checkbox" id="corner"><label for="corner" style="margin:0;font-weight:600">Corner plot <span style="color:var(--muted);font-weight:400">(declared by CDA; unlocks extra rear porch if &gt;300 sq. yd.)</span></label></div>
     <div class="chk"><input type="checkbox" id="openside"><label for="openside" style="margin:0;font-weight:600">One side faces park / open space / nullah <span style="color:var(--muted);font-weight:400">(NOT a road — earns up to 50% relaxation of that side setback)</span></label></div>
     <div class="chk"><input type="checkbox" id="basement" checked><label for="basement" style="margin:0;font-weight:600">Planning a basement <span style="color:var(--muted);font-weight:400">(shows basement + scrutiny-fee implication)</span></label></div>
@@ -149,11 +158,11 @@
 </div>
 
 <div id="results">
-<h2>2 · Your applicable rule row</h2>
+<h2>2 · Your applicable CDA rule row (Schedule-1 / §8.22)</h2>
 <div id="rowInfo"></div>
 <div id="warnings"></div>
 
-<h2>3 · Covered-area &amp; allowances</h2>
+<h2>3 · Covered area &amp; allowances for your plot</h2>
 <div class="kpi" id="kpis"></div>
 <div class="tbl-wrap"><table id="resultTable"></table></div>
 <div class="xref noprint"><span>Understand any figure in the Rules Guide:</span>
@@ -167,15 +176,15 @@
   <a href="index.html#s14">§14 Fees</a>
 </div>
 
-<h2>4 · Scaled plot diagram</h2>
+<h2>4 · Scaled plot diagram — setbacks &amp; buildable block</h2>
 <figure class="fig"><span id="planSvg"></span>
 <figcaption id="planCap"></figcaption></figure>
 
-<h2>5 · Mumty width check</h2>
+<h2>5 · Mumty / stair-tower check (¼ ground-floor rule)</h2>
 <figure class="fig"><span id="mumtySvg"></span>
 <figcaption id="mumtyCap"></figcaption></figure>
 
-<h2>6 · Compliance reminders for this plot</h2>
+<h2>6 · CDA compliance reminders for this plot</h2>
 <div id="reminders"></div>
 <div class="guide-cta noprint">
   <div><b>📖 Want clause wording, diagrams &amp; the full design checklist?</b><br><span style="font-size:14px;color:var(--muted)">Open the companion Rules Guide — 20 illustrated sections covering every figure above.</span></div>
@@ -185,7 +194,9 @@
 </div>
 
 </div>
-<footer>Calculator logic implements <b>Schedule-1</b> (sector dwelling houses) and <b>Table-1 of §8.22</b> (unplanned Zone II/IV/V) of the ICT Building Control Regulations 2020. See the <a href="index.html">full Rules Guide</a> for clause references, diagrams and the design checklist.</footer>
+<footer>Calculator logic implements <b>Schedule-1</b> (sector dwelling houses) and <b>Table-1 of §8.22</b> (unplanned Zone II/IV/V) of the ICT Building Control Regulations 2020. See the <a href="index.html">full Rules Guide</a> for clause references, diagrams and the design checklist.
+  <div class="credit">Developed by <b>Visual Flow Labs</b> &nbsp;·&nbsp; Contact: <a href="tel:+923435026732">+92 343 5026732</a></div>
+</footer>
 </div>
 
 <script>
@@ -422,5 +433,5 @@ function showNoMatch(sqyd,W,neg){
 zoneChange();
 </script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a385787ccbb6411e',t:'MTc4ODk0OTMzNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>

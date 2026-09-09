@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CDA Islamabad — Residential Construction Rules | Complete Reference Guide</title>
+<meta name="description" content="Free illustrated reference guide to CDA Islamabad residential construction rules: covered area, setbacks, mumty, height, basement, porch, room sizes, farmhouses & approvals under ICT Building Control Regulations 2020.">
+<meta name="keywords" content="CDA Islamabad, residential construction rules, CDA bylaws, covered area, setbacks, mumty, ICT Building Control Regulations 2020, house construction Islamabad, plot design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CDA Islamabad — Residential Construction Rules | Complete Reference Guide">
+<meta property="og:description" content="Covered area, floors, setbacks, mumty, basement, porch, approvals & penalties for any CDA plot size — free illustrated guide + interactive calculator.">
+<meta name="theme-color" content="#073d2a">
 <style>
   :root{
     --green:#0b5c3f; --green-dark:#073d2a; --green-light:#e7f4ec;
@@ -48,7 +54,7 @@
   a{color:var(--blue)}
   /* TOC */
   .toc{background:var(--green-light);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:26px 0}
-  .toc h3{margin:0 0 10px;color:var(--green-dark)}
+  .toc h2.toc-title{margin:0 0 10px;color:var(--green-dark);font-size:18px}
   .toc ol{margin:0;padding-left:22px;columns:2;column-gap:36px}
   .toc li{margin:5px 0;font-size:14.5px}
   .toc a{color:var(--green-dark);text-decoration:none;font-weight:600}
@@ -103,7 +109,10 @@
   .kpi .v{font-size:26px;font-weight:800;color:var(--gold)}
   .kpi .l{font-size:13px;color:#d7e7de}
   footer{background:var(--green-dark);color:#cfe3d8;padding:30px 48px;font-size:13.5px}
-  footer h3{color:#fff;margin-top:0}
+  .f-title{color:#fff;font-size:17px;font-weight:700;margin:0 0 10px}
+  .credit{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);text-align:center;font-size:14px}
+  .credit a{color:var(--gold);font-weight:700;text-decoration:none}
+  .credit a:hover{text-decoration:underline}
   footer a{color:var(--gold)}
   .print-btn{display:inline-block;background:var(--gold);color:#20301f;font-weight:700;border:none;
     padding:10px 22px;border-radius:8px;font-size:15px;cursor:pointer;margin-top:14px}
@@ -137,7 +146,7 @@
     width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
     animation:arrowPush 1.8s ease-in-out infinite}
   @keyframes arrowPush{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
-  .fab{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:9px;
+  .fab{position:fixed;right:22px;bottom:92px;z-index:50;display:flex;align-items:center;gap:9px;
     background:var(--green-dark);color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;
     padding:13px 20px 13px 16px;border-radius:50px;box-shadow:0 6px 20px rgba(0,0,0,.3);
     transition:transform .25s ease,box-shadow .25s ease}
@@ -145,21 +154,34 @@
   .fab::before{content:"";position:absolute;inset:-4px;border-radius:60px;border:2px solid var(--gold);
     animation:ringPulse 2.2s ease-out infinite;pointer-events:none}
   @keyframes ringPulse{0%{opacity:.9;transform:scale(.97)}70%{opacity:0;transform:scale(1.08)}100%{opacity:0}}
+  .free-pill{display:inline-block;background:var(--green-dark);color:var(--gold);font-weight:800;font-size:11px;
+    letter-spacing:1.5px;padding:3px 12px;border-radius:20px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+    animation:freePulse 1.6s ease-in-out infinite}
+  @keyframes freePulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(11,61,46,.5)}50%{transform:scale(1.1);box-shadow:0 0 0 7px rgba(11,61,46,0)}}
+  .totop{position:fixed;right:22px;bottom:22px;z-index:50;width:52px;height:52px;border-radius:50%;
+    background:var(--gold);color:#20301f;font-size:24px;font-weight:800;border:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3);
+    opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
+  .totop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .totop:hover{transform:translateY(-3px)}
   .tryit{display:inline-block;background:var(--gold-light);border:1.5px solid var(--gold);border-radius:8px;
     padding:2px 10px;font-size:14px;text-decoration:none!important;color:#4d3d05!important;font-weight:700;
     transition:background .2s ease}
   .tryit:hover{background:var(--gold);color:#20301f!important}
   @media (prefers-reduced-motion:reduce){
-    .calc-banner::after,.cb-icon,.cb-arrow,.fab::before{animation:none!important}
-    .calc-banner,.fab,.tryit{transition:none}html{scroll-behavior:auto}}
+    .calc-banner::after,.cb-icon,.cb-arrow,.fab::before,.free-pill{animation:none!important}
+    .calc-banner,.fab,.tryit,.totop{transition:none}html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"CDA Islamabad — Residential Construction Rules: Complete Reference Guide","description":"Free illustrated guide to CDA Islamabad residential construction rules — covered area, setbacks, mumty, height, basement, porch, farmhouses and approvals under the ICT Building Control Regulations 2020.","inLanguage":"en","author":{"@type":"Organization","name":"Visual Flow Labs"}}
+</script>
 </head>
 <body>
 <div class="page">
 
 <!-- ================= COVER ================= -->
 <div class="cover">
-  <div class="badge">Reference Guide for Architects, Builders &amp; Homeowners</div>
+  <div class="badge">Reference Guide for Architects, Builders &amp; Homeowners <span class="free-pill">★ FREE</span></div>
   <h1>CDA Islamabad<br><span>Residential Construction Rules</span></h1>
   <p class="sub">Covered area, floors, setbacks, mumty, basement, porch &amp; projections, room sizes, housing units, extra/adjoining land, approvals and penalties — everything needed to plan and design a house on any CDA plot size, in one illustrated document.</p>
   <div class="cover-meta">
@@ -173,7 +195,7 @@
 
 <!-- ================= TOC ================= -->
 <div class="toc">
-  <h3>📑 Contents</h3>
+  <h2 class="toc-title">📑 Contents</h2>
   <ol>
     <li><a href="#s1">How to use this guide (design workflow)</a></li>
     <li><a href="#s2">Plot categories &amp; size conversions</a></li>
@@ -205,7 +227,7 @@
 </div>
 
 <!-- ================= S1 ================= -->
-<h2 class="sec" id="s1"><span class="num">1</span> How to use this guide (design workflow)</h2>
+<h2 class="sec" id="s1"><span class="num">1</span> How to use this CDA rules guide (design workflow)</h2>
 <p class="lede">To design a CDA-compliant house on <b>any</b> plot size, follow these seven steps in order. Each step points to the section with exact figures.</p>
 <div class="steps">
   <div class="step"><span class="n">1</span><b>Fix your plot facts</b> — exact size (sq. yd.), frontage (ft), dimensions &amp; orientation from the allotment letter and on-site demarcation. (§2)</div>
@@ -221,7 +243,7 @@
 Under the 2020 Regulations there is <b>no fixed ground-coverage percentage or FAR number for dwelling houses</b>. The rule is: <b>“construction may cover a block, leaving compulsory setbacks”</b> — on ground <i>and</i> first floor (Reg. 2.1.8 &amp; Schedule-1). Your covered area is therefore decided by your <b>setbacks</b>, which depend on plot size + frontage. Old percentage rules (60%/50%) no longer apply.</div>
 
 <!-- ================= S2 ================= -->
-<h2 class="sec" id="s2"><span class="num">2</span> Plot categories &amp; size conversions</h2>
+<h2 class="sec" id="s2"><span class="num">2</span> CDA plot categories &amp; Marla–Kanal size conversions</h2>
 <h3>2.1 The three development types</h3>
 <div class="cards">
   <div class="card top"><h4>🏘️ Terraced / Attached (Type A)</h4>
@@ -281,7 +303,7 @@ Schedule-1 Note (vii): the development type of a plot is determined considering 
 </figure>
 
 <!-- ================= S3 ================= -->
-<h2 class="sec" id="s3"><span class="num">3</span> Master table — what you can build on each plot size</h2>
+<h2 class="sec" id="s3"><span class="num">3</span> Master table — what you can build on each CDA plot size</h2>
 <p class="lede">Direct transcription of <b>Schedule-1</b> of the 2020 Regulations (dwelling houses). Setbacks are in feet; “–” means no setback on that side (party wall).</p>
 <div class="tbl-wrap"><table>
   <tr>
@@ -308,7 +330,7 @@ Schedule-1 Note (vii): the development type of a plot is determined considering 
 <b>(a)</b> Smaller side setback goes on the <b>south or west</b> side (whichever applies to orientation). &nbsp;<b>(b)</b> Double porch up to <b>400 sft max</b>, subject to space. &nbsp;<b>(c)</b> Terraced porch figures (100–200 sft) are “subject to available area/space”. &nbsp;<b>(d)</b> Basement only under plinth area, leaving setbacks (§7). &nbsp;<b>(e)</b> One room + one small washroom allowed in mumty; <b>no kitchen, no independent unit</b> on rooftop (§6).</div>
 
 <!-- ================= S4 ================= -->
-<h2 class="sec" id="s4"><span class="num">4</span> Covered area rules + worked examples</h2>
+<h2 class="sec" id="s4"><span class="num">4</span> CDA covered area rules + worked examples</h2>
 <h3>4.1 The formula (all dwelling houses)</h3>
 <div class="kpi">
   <div><div class="v">Block</div><div class="l">= Plot minus compulsory setbacks (all sides)</div></div>
@@ -371,7 +393,7 @@ Reg. 2.4.2 / 4.1.7: any covered area beyond Schedule-1 limits <b>shall be demoli
 Before 2020, CDA Schedule-A fixed ground coverage at <b>60%</b> (terraced) / <b>50%</b> (detached), FAR at 1.2/1.05/0.90/0.85, and stair-tower caps at 150/200/250 sft. The 2020 Regulations <b>replaced</b> that system with setback-based coverage + ¼-GF mumty. If a contractor or old drawing quotes “60%/50% coverage”, it is outdated — but note the new setback geometry produces broadly similar footprints.</div>
 
 <!-- ================= S5 ================= -->
-<h2 class="sec" id="s5"><span class="num">5</span> Storeys, height &amp; plinth</h2>
+<h2 class="sec" id="s5"><span class="num">5</span> Storeys, height limit &amp; plinth rules in CDA sectors</h2>
 <div class="tbl-wrap"><table>
   <tr><th class="l">Parameter</th><th>Rule (all dwelling houses)</th><th>Reference</th></tr>
   <tr><td class="l"><b>Number of storeys</b></td><td><b>2 — Ground + First only.</b> No second floor / third storey on any residential plot size.</td><td>Schedule-1</td></tr>
@@ -434,7 +456,7 @@ Before 2020, CDA Schedule-A fixed ground coverage at <b>60%</b> (terraced) / <b>
 </figure>
 
 <!-- ================= S6 ================= -->
-<h2 class="sec" id="s6"><span class="num">6</span> Mumty / stair tower — complete rules</h2>
+<h2 class="sec" id="s6"><span class="num">6</span> Mumty / stair tower rules (¼ ground-floor allowance)</h2>
 <p class="lede">The mumty is the <b>only</b> structure allowed above the first-floor roof of a dwelling house (besides tanks, parapet, antennas). All of these conditions apply <b>together</b>.</p>
 <div class="tbl-wrap"><table>
   <tr><th class="l" style="width:26%">Rule</th><th>Terraced / attached houses</th><th>Detached houses</th></tr>
@@ -520,7 +542,7 @@ Common rejection/demolition triggers: mumty <b>wider</b> than ½ (terraced) or �
 </figure>
 
 <!-- ================= S7 ================= -->
-<h2 class="sec" id="s7"><span class="num">7</span> Basement rules</h2>
+<h2 class="sec" id="s7"><span class="num">7</span> Basement construction rules for CDA houses</h2>
 <div class="call rule"><b class="t">✅ The basement advantage</b>
 Basement area is <b>not counted</b> in FAR / permissible covered area and not counted as a storey (Reg. 2.6.1(ii)(xix)) — but it <b>is</b> counted for scrutiny fee and property tax. Detached houses may build basement under <b>100% of the permissible ground-floor coverage</b> (Reg. 2.6.1(ix)).</div>
 <div class="tbl-wrap"><table>
@@ -538,7 +560,7 @@ Basement area is <b>not counted</b> in FAR / permissible covered area and not co
 </table></div>
 
 <!-- ================= S8 ================= -->
-<h2 class="sec" id="s8"><span class="num">8</span> Setbacks (compulsory open spaces)</h2>
+<h2 class="sec" id="s8"><span class="num">8</span> Setbacks — compulsory open spaces &amp; relaxation rules</h2>
 <p class="lede"><b>Nothing</b> may be built in a setback except the specific items listed in this section and §9. “Any kind of structure in the compulsory setback” is a demolition trigger at completion stage.</p>
 <figure class="fig">
 <svg viewBox="0 0 860 420" role="img" aria-label="Sample 1-kanal plot plan with setbacks">
@@ -624,7 +646,7 @@ Projections within these limits are <b>not counted</b> in FAR/covered area — b
 </table></div>
 
 <!-- ================= S10 ================= -->
-<h2 class="sec" id="s10"><span class="num">10</span> Minimum room sizes (Schedule-2)</h2>
+<h2 class="sec" id="s10"><span class="num">10</span> Minimum room sizes — CDA Schedule-2 standards</h2>
 <p class="lede">Every space must meet these minima. Area/height/width shortfalls up to <b>10%</b> are relaxable <b>with penalty</b> — design to the full minima.</p>
 <div class="tbl-wrap"><table>
   <tr><th class="l">Space</th><th>Min area</th><th>Min height</th><th>Min width</th><th>Relaxable to (penalty)</th></tr>
@@ -644,7 +666,7 @@ Projections within these limits are <b>not counted</b> in FAR/covered area — b
 Basement rooms used for habitation must meet these same standards. Internal ventilation wells / open-to-sky shafts should be <b>≥ 50 sft</b> (below that attracts heavy fines at completion per Building Control practice). Staircase risers/treads/widths and step counts must be dimensioned on the drawings.</div>
 
 <!-- ================= S11 ================= -->
-<h2 class="sec" id="s11"><span class="num">11</span> Housing units, sub-division &amp; amalgamation</h2>
+<h2 class="sec" id="s11"><span class="num">11</span> Housing units, plot sub-division &amp; amalgamation rules</h2>
 <div class="tbl-wrap"><table>
   <tr><th class="l">Item</th><th class="l">Rule</th></tr>
   <tr><td class="l"><b>Units per undivided plot</b></td><td class="l"><b>Below 488 sq. yd. → ONE unit · 488 sq. yd. &amp; above → TWO units</b> (within permissible covered area). Consistent with Schedule-1: terraced/semi = 1, detached = 2.</td></tr>
@@ -674,7 +696,7 @@ Basement rooms used for habitation must meet these same standards. Internal vent
 </table></div>
 
 <!-- ================= S13 ================= -->
-<h2 class="sec" id="s13"><span class="num">13</span> Extra / adjoining / excess land — the rules</h2>
+<h2 class="sec" id="s13"><span class="num">13</span> Extra, adjoining &amp; excess CDA land — purchase and use rules</h2>
 <p class="lede">The 2020 Building Control Regulations contain <b>no separate “extra land” chapter</b> — but several binding rules govern every kind of land beyond your allotted plot. They boil down to one principle: <b>you may build only inside your demarcated plot; everything outside it belongs to CDA/the state.</b></p>
 <div class="cards">
   <div class="card top"><h4>1️⃣ Build only inside your plot line</h4>
@@ -694,7 +716,7 @@ Basement rooms used for habitation must meet these same standards. Internal vent
 Extending the lawn/boundary over adjoining CDA land · building a guard room, generator room or ramp on the berm · assuming a “private” side strip is yours because you maintain it · buying a plot assuming the empty land beside it can be merged without CDA disposal/allotment. All are encroachments: CDA can reclaim the land and demolish the structure. <b>Verify plot boundaries by official demarcation (Amin report) before purchase and before design.</b></div>
 
 <!-- ================= S14 ================= -->
-<h2 class="sec" id="s14"><span class="num">14</span> Approval → construction → completion &amp; penalties</h2>
+<h2 class="sec" id="s14"><span class="num">14</span> CDA approval process: construction permit, completion &amp; penalties</h2>
 <h3>14.1 Process at a glance</h3>
 <figure class="fig">
 <svg viewBox="0 0 860 170" role="img" aria-label="Approval process flowchart">
@@ -734,7 +756,7 @@ Extending the lawn/boundary over adjoining CDA land · building a guard room, ge
 </table></div>
 
 <!-- ================= S15 ================= -->
-<h2 class="sec" id="s15"><span class="num">15</span> Pre-submission design checklist</h2>
+<h2 class="sec" id="s15"><span class="num">15</span> Pre-submission CDA design checklist for architects</h2>
 <ul class="check">
   <li>Plot size, frontage, dimensions &amp; orientation taken from allotment letter + fresh demarcation (no assumed “extra” land).</li>
   <li>Correct Master-Table row applied using <b>size + frontage</b>; irregular-plot averaging done if needed.</li>
@@ -753,7 +775,7 @@ Extending the lawn/boundary over adjoining CDA land · building a guard room, ge
 </ul>
 
 <!-- ================= S16 ================= -->
-<h2 class="sec" id="s16"><span class="num">16</span> Farmhouses in CDA-approved farm housing schemes (Zone II / IV / V)</h2>
+<h2 class="sec" id="s16"><span class="num">16</span> CDA farmhouse rules — approved farm housing schemes (Zone II / IV / V)</h2>
 <p class="lede">Reg. §8.21 — a <b>separate regime</b> from sector houses: percentage-based coverage (20% per floor), very large setbacks, and landscape/fencing controls. Minimum plot: <b>4 kanals</b>.</p>
 <div class="tbl-wrap"><table>
   <tr><th class="l" style="width:28%">Parameter</th><th class="l">Rule</th></tr>
@@ -797,7 +819,7 @@ Extending the lawn/boundary over adjoining CDA land · building a guard room, ge
 </figure>
 
 <!-- ================= S17 ================= -->
-<h2 class="sec" id="s17"><span class="num">17</span> Agro / orchard / poultry-vegetable farms (Zone IV)</h2>
+<h2 class="sec" id="s17"><span class="num">17</span> Agro, orchard &amp; poultry-vegetable farm rules (Zone IV)</h2>
 <p class="lede">Reg. §8.15 — these are <b>production leases</b>, not residential plots. Construction is capped at <b>9,500 sft total</b> in a fixed functional break-up, 80% of land must farm, and the sub-division position has changed twice — read carefully.</p>
 <h3>17.1 The 9,500 sft fixed break-up (building zone ≤10% of plot)</h3>
 <div class="tbl-wrap"><table>
@@ -826,7 +848,7 @@ CDA's practice: construction from <b>9,501 to ≈12,500 sft</b> (≈3,000 sft ex
 <b>2020 Regulations:</b> “No sub-division and amalgamation shall be allowed.” &nbsp;<b>Aug 2023:</b> an amendment appeared to allow <b>one</b> sub-division of 5-acre plots into 2 × 2.5 acres (coverage split 4,750/4,750, no increase). &nbsp;<b>Oct 2024:</b> the CDA Board ruled there was <b>no provision for sub-division of agro farms in any scheme</b>, barred it, and ordered an inquiry into the 2023 change. <b>Current position: sub-division barred.</b> ~150 of ~550 farms were sub-divided historically — their status is case-by-case. Verify the individual farm's record at CDA before any transaction.</div>
 
 <!-- ================= S18 ================= -->
-<h2 class="sec" id="s18"><span class="num">18</span> Unplanned houses in Zone II / IV / V (Table-1)</h2>
+<h2 class="sec" id="s18"><span class="num">18</span> Unplanned-area house rules in Zone II / IV / V (Table-1)</h2>
 <p class="lede">Reg. §8.22 — for houses on <b>private land outside any housing scheme</b> where construction is permitted (and for regularizing pre-2020 construction there). Simpler marla-based table with <b>fixed mumty/porch caps</b> instead of the ¼-GF formula. The <b>Plot Design Calculator</b> computes these too.</p>
 <div class="tbl-wrap"><table>
   <tr><th>Plot size</th><th>Front</th><th>Rear</th><th>Side-1</th><th>Side-2</th><th>Max porch</th><th>Max mumty</th><th>Basement</th><th>Max plinth</th></tr>
@@ -847,7 +869,7 @@ CDA's practice: construction from <b>9,501 to ≈12,500 sft</b> (≈3,000 sft ex
 </table></div>
 
 <!-- ================= S19 ================= -->
-<h2 class="sec" id="s19"><span class="num">19</span> Apartment buildings — parameters</h2>
+<h2 class="sec" id="s19"><span class="num">19</span> Apartment building rules — CDA parameters (FAR, height, parking)</h2>
 <p class="lede">Two overlapping regimes apply — <b>Schedule-1 Types A/B</b> (general apartment plots) and <b>§8.20</b> (apartment buildings in CDA sectors / cooperative &amp; private schemes on CDA-approved sites). Where they differ, confirm applicability — flagged below.</p>
 <h3>19.1 Schedule-1 apartment plots</h3>
 <div class="tbl-wrap"><table>
@@ -914,10 +936,22 @@ This is a <b>design-reference consolidation, not legal advice</b>. CDA amends re
 
 </div><!-- /content -->
 <footer>
-  <h3>CDA Islamabad — Residential Construction Rules · Reference Guide</h3>
+  <p class="f-title">CDA Islamabad — Residential Construction Rules · Reference Guide</p>
   <p>Compiled September 2026 from the ICT Building Control Regulations 2020 (S.R.O. 1575(I)/2019) and official guidance. For the authoritative text, consult the Gazette notification and CDA's Building &amp; Housing Control Wing. Pair this guide with the <a href="calculator.html">📐 Plot Design Calculator</a> — print either file or save as PDF for your project folder.</p>
+  <div class="credit">Developed by <b>Visual Flow Labs</b> &nbsp;·&nbsp; Contact: <a href="tel:+923435026732">+92 343 5026732</a></div>
 </footer>
 <a class="fab noprint" href="calculator.html" aria-label="Open the Plot Design Calculator">📐<span>Calculator</span></a>
+<button class="totop noprint" id="toTop" aria-label="Back to top" title="Back to top">↑</button>
 </div>
+<script>
+(function(){
+  var b=document.getElementById('toTop');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function onScroll(){b.classList.toggle('show',window.scrollY>500)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})});
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
