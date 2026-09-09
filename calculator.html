@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDA Plot Design Calculator — Sector Houses &amp; Unplanned Areas</title>
+<style>
+  :root{--green:#0b5c3f;--green-dark:#073d2a;--green-light:#e7f4ec;--gold:#c9a227;
+    --gold-light:#faf3dd;--ink:#1c2420;--muted:#5b6b62;--line:#d9e4dc;
+    --red:#b3261e;--red-bg:#fdecea;--blue:#0b5cad;--blue-bg:#e8f1fb;--amber:#8a5a00;--amber-bg:#fff4d6}
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f7f5;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;font-size:16px}
+  .page{max-width:1020px;margin:0 auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.08)}
+  .cover{background:linear-gradient(160deg,var(--green-dark),var(--green) 60%,#0e7a53);color:#fff;padding:44px 40px 30px}
+  .cover h1{margin:0 0 8px;font-size:32px}.cover h1 span{color:var(--gold)}
+  .cover p{margin:0;color:#dcebe3;max-width:700px}
+  .back{display:inline-block;margin-bottom:14px;color:var(--gold);text-decoration:none;font-weight:700;font-size:14px}
+  .content{padding:24px 40px 50px}
+  h2{font-size:21px;color:var(--green-dark);margin:30px 0 10px;border-top:3px solid var(--green);padding-top:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .panel{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fbfdfc}
+  .panel h3{margin:0 0 12px;color:var(--green-dark);font-size:17px}
+  label{display:block;font-size:14px;font-weight:700;margin:12px 0 4px}
+  input[type=number],select{width:100%;padding:10px 12px;font-size:16px;border:1.5px solid var(--line);
+    border-radius:8px;background:#fff}
+  input:focus,select:focus{outline:none;border-color:var(--green)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .presets{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .presets button{background:#fff;border:1.5px solid var(--green);color:var(--green-dark);font-weight:700;
+    border-radius:20px;padding:6px 14px;font-size:13px;cursor:pointer}
+  .presets button:hover{background:var(--green-light)}
+  .chk{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-size:14.5px}
+  .chk input{width:20px;height:20px;margin-top:2px;accent-color:var(--green)}
+  .calc-btn{display:block;width:100%;background:var(--gold);color:#20301f;font-weight:800;font-size:18px;
+    border:none;border-radius:10px;padding:14px;cursor:pointer;margin-top:16px}
+  .calc-btn:hover{filter:brightness(1.05)}
+  .tbl-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:14.5px}
+  th{background:var(--green);color:#fff;padding:10px 8px;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+  td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#f6faf8}
+  td.l{text-align:left}td.r{text-align:right;font-variant-numeric:tabular-nums}
+  td.v{font-weight:800;color:var(--green-dark);text-align:right;font-variant-numeric:tabular-nums}
+  .call{border-radius:10px;padding:12px 16px;margin:12px 0;font-size:14.5px;border-left:6px solid}
+  .warn{background:var(--red-bg);border-color:var(--red)}
+  .note{background:var(--amber-bg);border-color:var(--gold)}
+  .rule{background:var(--green-light);border-color:var(--green)}
+  figure.fig{margin:18px 0;border:1px solid var(--line);border-radius:12px;padding:14px 10px 6px;text-align:center}
+  figure.fig svg{max-width:100%;height:auto}
+  figcaption{font-size:13.5px;color:var(--muted);padding:8px 12px 10px}
+  .kpi{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+  .kpi div{flex:1;min-width:140px;background:var(--green-dark);color:#fff;border-radius:10px;padding:12px;text-align:center}
+  .kpi .v{font-size:22px;font-weight:800;color:var(--gold)}
+  .kpi .l{font-size:12.5px;color:#d7e7de}
+  #results{display:none}
+  footer{background:var(--green-dark);color:#cfe3d8;padding:26px 40px;font-size:13.5px}
+  footer a{color:var(--gold)}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}.content{padding:18px}.cover{padding:30px 20px}}
+  @media print{body{background:#fff}.page{box-shadow:none}.noprint{display:none}#results{display:block!important}}
+  /* ---- Cross-navigation UX: sticky bar, guide chips, CTA ---- */
+  .topbar{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:12px;
+    background:rgba(7,61,42,.97);color:#fff;padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  .backbtn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#20301f!important;
+    font-weight:800;font-size:14.5px;text-decoration:none;padding:8px 16px;border-radius:30px;white-space:nowrap;
+    transition:transform .2s ease,box-shadow .2s ease}
+  .backbtn:hover{transform:translateX(-3px);box-shadow:0 4px 14px rgba(0,0,0,.3)}
+  .backbtn .arr{display:inline-block;animation:arrNudge 1.8s ease-in-out infinite}
+  @keyframes arrNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-4px)}}
+  .tb-title{font-weight:700;font-size:15px;flex:1;text-align:center}
+  .printlink{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff;border-radius:20px;
+    padding:6px 14px;font-size:13.5px;cursor:pointer;white-space:nowrap}
+  .printlink:hover{background:rgba(255,255,255,.15)}
+  .gref{display:inline-block;background:var(--green-light);border:1px solid var(--green);color:var(--green-dark)!important;
+    font-size:12px;font-weight:700;border-radius:12px;padding:1px 9px;margin-left:8px;text-decoration:none;white-space:nowrap}
+  .gref:hover{background:var(--green);color:#fff!important}
+  .xref{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;font-size:13.5px;align-items:center}
+  .xref span{color:var(--muted);font-weight:700}
+  .xref a{background:#fff;border:1.5px solid var(--green);color:var(--green-dark);font-weight:700;
+    border-radius:16px;padding:3px 12px;text-decoration:none;transition:background .2s ease}
+  .xref a:hover{background:var(--green-light)}
+  .guide-cta{margin-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    background:linear-gradient(120deg,var(--green-light),#fff);border:2px solid var(--green);
+    border-radius:12px;padding:16px 20px}
+  .guide-cta a{margin-left:auto;background:var(--green);color:#fff!important;font-weight:800;text-decoration:none;
+    padding:10px 22px;border-radius:30px;white-space:nowrap;transition:transform .2s ease}
+  .guide-cta a:hover{transform:translateX(4px)}
+  #results[style*="block"]{animation:fadeUp .45s ease}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .backbtn .arr,#results[style*="block"]{animation:none!important}
+    .backbtn,.guide-cta a,.xref a{transition:none}html{scroll-behavior:auto}}
+  @media(max-width:560px){.tb-title{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="topbar noprint">
+  <a class="backbtn" href="index.html"><span class="arr">←</span> Rules Guide</a>
+  <span class="tb-title">📐 Plot Design Calculator</span>
+  <button class="printlink" onclick="window.print()">🖨 Print</button>
+</nav>
+<div class="cover">
+  <h1>📐 CDA Plot <span>Design Calculator</span></h1>
+  <p>Enter your plot dimensions to instantly get the applicable Schedule-1 row, setbacks, buildable block, covered area, mumty &amp; porch allowances, units, and a scaled plot diagram — for <b>CDA sector houses</b> and <b>unplanned houses (Zone II / IV / V)</b>.</p>
+</div>
+<div class="content">
+
+<h2 style="border:none;padding:0;margin-top:6px">1 · Enter your plot</h2>
+<div class="grid">
+  <div class="panel">
+    <h3>Plot details</h3>
+    <label for="zone">Area type</label>
+    <select id="zone" onchange="zoneChange()">
+      <option value="sector">CDA sector / planned area (Schedule-1)</option>
+      <option value="unplanned">Unplanned Zone II / IV / V house (Table-1)</option>
+    </select>
+    <div class="row2">
+      <div><label for="frontage">Frontage / width (ft)</label><input type="number" id="frontage" value="50" min="10" max="500" step="0.5"></div>
+      <div><label for="depth">Depth (ft)</label><input type="number" id="depth" value="100" min="10" max="1000" step="0.5"></div>
+    </div>
+    <label>Quick presets (fills width × depth)</label>
+    <div class="presets">
+      <button onclick="preset(25,45)">5M · 25×45</button>
+      <button onclick="preset(30,52.5)">7M · 30×52.5</button>
+      <button onclick="preset(35,65)">10M · 35×65</button>
+      <button onclick="preset(40,79)">14M · 40×79</button>
+      <button onclick="preset(50,100)">1K · 50×100</button>
+      <button onclick="preset(60,90)">1K · 60×90</button>
+      <button onclick="preset(80,113)">2K · 80×113</button>
+    </div>
+    <div id="typeOverrideWrap">
+      <label for="typeOverride">Development type</label>
+      <select id="typeOverride">
+        <option value="auto">Auto-detect (size + frontage)</option>
+        <option value="A">Force: Terraced / Attached (A)</option>
+        <option value="B">Force: Semi-detached (B)</option>
+        <option value="C">Force: Detached (C/D)</option>
+      </select>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Site conditions</h3>
+    <div class="chk"><input type="checkbox" id="corner"><label for="corner" style="margin:0;font-weight:600">Corner plot <span style="color:var(--muted);font-weight:400">(declared by CDA; unlocks extra rear porch if &gt;300 sq. yd.)</span></label></div>
+    <div class="chk"><input type="checkbox" id="openside"><label for="openside" style="margin:0;font-weight:600">One side faces park / open space / nullah <span style="color:var(--muted);font-weight:400">(NOT a road — earns up to 50% relaxation of that side setback)</span></label></div>
+    <div class="chk"><input type="checkbox" id="basement" checked><label for="basement" style="margin:0;font-weight:600">Planning a basement <span style="color:var(--muted);font-weight:400">(shows basement + scrutiny-fee implication)</span></label></div>
+    <button class="calc-btn" onclick="calculate()">Calculate →</button>
+    <p style="font-size:13px;color:var(--muted)">Reference only — confirm the applicable row and current fee schedule with CDA Building Control before designing.</p>
+  </div>
+</div>
+
+<div id="results">
+<h2>2 · Your applicable rule row</h2>
+<div id="rowInfo"></div>
+<div id="warnings"></div>
+
+<h2>3 · Covered-area &amp; allowances</h2>
+<div class="kpi" id="kpis"></div>
+<div class="tbl-wrap"><table id="resultTable"></table></div>
+<div class="xref noprint"><span>Understand any figure in the Rules Guide:</span>
+  <a href="index.html#s4">§4 Covered area</a>
+  <a href="index.html#s5">§5 Height</a>
+  <a href="index.html#s6">§6 Mumty</a>
+  <a href="index.html#s7">§7 Basement</a>
+  <a href="index.html#s8">§8 Setbacks</a>
+  <a href="index.html#s9">§9 Porch</a>
+  <a href="index.html#s11">§11 Units</a>
+  <a href="index.html#s14">§14 Fees</a>
+</div>
+
+<h2>4 · Scaled plot diagram</h2>
+<figure class="fig"><span id="planSvg"></span>
+<figcaption id="planCap"></figcaption></figure>
+
+<h2>5 · Mumty width check</h2>
+<figure class="fig"><span id="mumtySvg"></span>
+<figcaption id="mumtyCap"></figcaption></figure>
+
+<h2>6 · Compliance reminders for this plot</h2>
+<div id="reminders"></div>
+<div class="guide-cta noprint">
+  <div><b>📖 Want clause wording, diagrams &amp; the full design checklist?</b><br><span style="font-size:14px;color:var(--muted)">Open the companion Rules Guide — 20 illustrated sections covering every figure above.</span></div>
+  <a href="index.html">Open Rules Guide →</a>
+</div>
+<div class="noprint" style="margin-top:16px"><button class="calc-btn" onclick="window.print()">🖨️ Print / Save results as PDF</button></div>
+</div>
+
+</div>
+<footer>Calculator logic implements <b>Schedule-1</b> (sector dwelling houses) and <b>Table-1 of §8.22</b> (unplanned Zone II/IV/V) of the ICT Building Control Regulations 2020. See the <a href="index.html">full Rules Guide</a> for clause references, diagrams and the design checklist.</footer>
+</div>
+
+<script>
+// ---------- DATA: Schedule-1 sector rows ----------
+const ROWS = [
+ {id:'A1', type:'A', label:"Terraced / Attached Type 'A' — up to 150 sq. yd.", sMin:0,   sMax:150,  fMin:20, fMax:29,  st:2, ht:30, F:5,  S1:0, S2:0, R:5,  units:1, porch:100,     plinth:3.5},
+ {id:'A2', type:'A', label:"Terraced / Attached Type 'A' — 151–200 sq. yd.", sMin:151, sMax:200,  fMin:25, fMax:30,  st:2, ht:30, F:6,  S1:0, S2:0, R:6,  units:1, porch:150,     plinth:3.5},
+ {id:'A3', type:'A', label:"Terraced / Attached Type 'A' — 201–300 sq. yd.", sMin:201, sMax:300,  fMin:30, fMax:39,  st:2, ht:30, F:10, S1:0, S2:0, R:8,  units:1, porch:160,     plinth:3.5},
+ {id:'A4', type:'A', label:"Terraced / Attached Type 'A' — 300–450 sq. yd.", sMin:300, sMax:450,  fMin:40, fMax:49,  st:2, ht:30, F:10, S1:0, S2:4, R:10, units:1, porch:200,     plinth:3.5},
+ {id:'B',  type:'B', label:"Semi-detached Type 'B' — 300–625 sq. yd.",        sMin:300, sMax:625,  fMin:40, fMax:49,  st:2, ht:30, F:10, S1:0, S2:5, R:10, units:1, porch:200,     plinth:3.5},
+ {id:'C1', type:'C', label:"Detached Type 'C' — 400–1,000 sq. yd.",           sMin:400, sMax:1000, fMin:50, fMax:59,  st:2, ht:30, F:15, S1:5, S2:5, R:10, units:2, porch:'200 / 400', plinth:5},
+ {id:'C2', type:'C', label:"Detached Type 'C' — 530–1,335 sq. yd.",           sMin:530, sMax:1335, fMin:60, fMax:69,  st:2, ht:30, F:15, S1:10,S2:5, R:10, units:2, porch:'200 / 400', plinth:5},
+ {id:'C3', type:'C', label:"Detached Type 'C' — 700–1,670 sq. yd.",           sMin:700, sMax:1670, fMin:70, fMax:79,  st:2, ht:30, F:20, S1:10,S2:10,R:10, units:2, porch:'200 / 400', plinth:5},
+ {id:'D1', type:'C', label:"Detached Type 'D' — 885–2,670 sq. yd.",           sMin:885, sMax:2670, fMin:80, fMax:89,  st:2, ht:30, F:25, S1:10,S2:10,R:10, units:2, porch:'200 / 400', plinth:5},
+ {id:'D2', type:'C', label:"Detached Type 'D' — 800–2,900 sq. yd.",           sMin:800, sMax:2900, fMin:90, fMax:99,  st:2, ht:30, F:30, S1:10,S2:10,R:10, units:2, porch:'200 / 400', plinth:5},
+ {id:'D3', type:'C', label:"Detached Type 'D' — 1,770–2,720 sq. yd.",         sMin:1770,sMax:2720, fMin:100,fMax:999, st:2, ht:30, F:40, S1:15,S2:15,R:10, units:2, porch:'200 / 400', plinth:5}
+];
+// ---------- DATA: Unplanned Zone II/IV/V Table-1 (marla-based) ----------
+const UROWS = [
+ {label:'Up to 5 marlas',   mMax:5,            F:5,  R:5, S1:0, S2:0,  porch:100, mumty:200, plinth:3.5},
+ {label:'Up to 10 marlas',  mMax:10,           F:8,  R:8, S1:5, S2:0,  porch:180, mumty:350, plinth:3.5},
+ {label:'Up to 15 marlas',  mMax:15,           F:10, R:8, S1:5, S2:0,  porch:200, mumty:350, plinth:3.5},
+ {label:'Up to 1 kanal',    mMax:20,           F:10, R:8, S1:5, S2:5,  porch:300, mumty:400, plinth:5},
+ {label:'More than 1 kanal',mMax:100000,       F:15, R:10,S1:5, S2:10, porch:300, mumty:400, plinth:5}
+];
+const SQYD_PER_SFT = 1/9, MARLA_SFT = 272.25;
+
+function preset(w,d){ document.getElementById('frontage').value=w; document.getElementById('depth').value=d; }
+function zoneChange(){
+  document.getElementById('typeOverrideWrap').style.display =
+    document.getElementById('zone').value==='sector' ? 'block':'none';
+}
+function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
+function ft(x){ return (Math.round(x*2)/2) + '′'; }
+function G(sec){ return ` <a class="gref noprint" href="index.html#${sec}" title="Open this rule in the full guide">§${sec.slice(1)} →</a>`; }
+
+function matchSectorRow(sqyd, f, override){
+  let cands = ROWS.filter(r => sqyd>=r.sMin-0.01 && sqyd<=r.sMax+0.01 && f>=r.fMin-0.01 && f<=r.fMax+0.01);
+  if(override!=='auto'){ const o = cands.filter(r=>r.type===override); if(o.length) cands=o; }
+  if(cands.length===1) return {row:cands[0], status:'exact', note:''};
+  if(cands.length>1){
+    // A4 vs B overlap: prefer by override or default to B (semi) with note
+    if(override==='auto'){
+      const b = cands.find(r=>r.id==='B');
+      return {row:b||cands[0], status:'choice',
+        note:'Plot fits both Terraced-A4 and Semi-detached-B rows. Result shows <b>Semi-detached (side 5′)</b>; use the “Development type” selector to force Attached (side 4′) if your street is fully terraced.'};
+    }
+    return {row:cands[0], status:'choice', note:'Multiple rows match; showing first — confirm with CDA.'};
+  }
+  // fallback: frontage-first, then size
+  let byF = ROWS.filter(r => f>=r.fMin-0.01 && f<=r.fMax+0.01);
+  if(override!=='auto'){ const o=byF.filter(r=>r.type===override); if(o.length) byF=o; }
+  if(byF.length) return {row:byF[0], status:'approx',
+    note:`Frontage ${ft(f)} fits this row, but plot size ${fmt(sqyd)} sq. yd. falls outside its ${byF[0].sMin}–${byF[0].sMax} band. CDA decides the applicable row — confirm before designing.`};
+  let byS = ROWS.filter(r => sqyd>=r.sMin-0.01 && sqyd<=r.sMax+0.01);
+  if(byS.length) return {row:byS[0], status:'approx',
+    note:`Size ${fmt(sqyd)} sq. yd. fits this row, but frontage ${ft(f)} falls outside its ${byS[0].fMin}–${byS[0].fMax} ft band. CDA decides the applicable row — confirm before designing.`};
+  return {row:null, status:'none', note:''};
+}
+
+function calculate(){
+  const zone = document.getElementById('zone').value;
+  const W = parseFloat(document.getElementById('frontage').value);
+  const D = parseFloat(document.getElementById('depth').value);
+  const corner = document.getElementById('corner').checked;
+  const openside = document.getElementById('openside').checked;
+  const wantBase = document.getElementById('basement').checked;
+  const override = document.getElementById('typeOverride').value;
+  if(!(W>0&&D>0)){ alert('Please enter valid frontage and depth.'); return; }
+
+  const areaSft = W*D, sqyd = areaSft/9, marla = areaSft/MARLA_SFT;
+  let row, warn=[], unplanned=false, mumtyFixed=null;
+
+  if(zone==='sector'){
+    const m = matchSectorRow(sqyd, W, override);
+    if(!m.row){ showNoMatch(sqyd,W); return; }
+    row = m.row;
+    if(m.status!=='exact') warn.push(m.note);
+    if(m.status==='exact' && override==='auto') warn.push('');
+  } else {
+    unplanned = true;
+    row = UROWS.find(r=>marla<=r.mMax+0.001) || UROWS[UROWS.length-1];
+    row = Object.assign({units: marla<16?1:2, st:2, ht:30}, row);
+    mumtyFixed = row.mumty;
+  }
+
+  // setbacks (apply open-side relaxation)
+  let F=row.F, S1=row.S1, S2=row.S2, R=row.R, relaxed=false;
+  const sideBase = Math.max(S1,S2);
+  if(openside && sideBase>0){ S2 = sideBase/2; S1 = (S1>=S2&&S1>0)? S1 : 0; if(S1===0&&row.S1>0&&row.S1<sideBase){S1=row.S1;} relaxed=true;
+    warn.push(`50% relaxation applied to the side facing open space/nullah: that side setback reduced from ${ft(sideBase)} to ${ft(sideBase/2)}. Condition: total permissible covered area must not be exceeded — CDA confirms case-by-case.`);
+  }
+  const sidesTotal = S1+S2;
+  const bw = W - sidesTotal, bd = D - F - R;
+  if(bw<=0||bd<=0){ showNoMatch(sqyd,W,true); return; }
+  const gf = bw*bd, ff = gf;
+  const detached = !unplanned && row.type==='C';
+  let mumty = unplanned ? mumtyFixed : gf/4;
+  let mumtyCap = false;
+  if(detached && mumty>600){ mumty=600; mumtyCap=true; }
+  const total = gf+ff+mumty;
+  const gcEff = gf/areaSft*100;
+  const maxMumtyW = detached ? W/3 : W/2;
+  const mumtyDepthNeeded = mumty/maxMumtyW;
+  const units = unplanned ? (marla<=16?1:2) : (sqyd<488?1:2);
+  const trees = W<=29?1 : W<=50?2 : W<=70?3 : W<=90?4 : 5;
+  const rain = sqyd>=400, servant = sqyd>=501;
+  const porchCap = unplanned ? row.porch : (detached?400:row.porch);
+  const porchNote = unplanned ? '' : (detached?'Single 200 / Double 400 sft per unit (double max 400 total)':'Max '+row.porch+' sft (subject to available space)');
+  const fee = Math.round(total*6 + (wantBase? gf*6 : 0));
+
+  // ---- row info ----
+  const sizeTxt = unplanned
+    ? `Unplanned Zone II/IV/V · <b>${row.label}</b> (${fmt(marla)} marlas / ${fmt(sqyd)} sq. yd.)`
+    : `Schedule-1 · <b>${row.label}</b> · frontage band ${row.fMin}–${row.fMax} ft`;
+  document.getElementById('rowInfo').innerHTML =
+    `<div class="call rule"><b>✔ Applicable row:</b> ${sizeTxt}<br>
+     <span style="font-size:13.5px">Plot: ${W}′ × ${D}′ = ${fmt(areaSft)} sft = ${fmt(sqyd)} sq. yd. = ${fmt(marla)} marlas (${(marla/20).toFixed(2)} kanal) · Type determined by size + frontage together (Sch-1 Note vii).</span></div>`;
+
+  // ---- warnings ----
+  let whtml = warn.filter(Boolean).map(w=>`<div class="call note">⚠️ ${w}</div>`).join('');
+  if(!unplanned && units!==row.units)
+    whtml += `<div class="call note">⚠️ <b>Units cross-check:</b> your row allows <b>${row.units}</b> unit(s), while Reg 4.1.6 allows <b>${units}</b> at ${fmt(sqyd)} sq. yd. (≥488 = two). Shown below: <b>${units}</b> — confirm applicability with Building Control.</div>`;
+  if(detached && mumtyCap)
+    whtml += `<div class="call note">📌 Mumty capped: ¼ of GF block = ${fmt(gf/4)} sft → capped at <b>600 sft</b> (detached).</div>`;
+  if(corner && sqyd>300)
+    whtml += `<div class="call rule">✔ Corner plot &gt;300 sq. yd.: one <b>extra 150 sft rear porch</b> (max 15′ long) allowed in addition to the figures below.</div>`;
+  document.getElementById('warnings').innerHTML = whtml;
+
+  // ---- KPIs ----
+  document.getElementById('kpis').innerHTML =
+    `<div><div class="v">${fmt(gf)} sft</div><div class="l">Buildable block (GF) — ${ft(bw)} × ${ft(bd)}</div></div>
+     <div><div class="v">${fmt(total)} sft</div><div class="l">Total roofed ≈ GF + FF + mumty</div></div>
+     <div><div class="v">${fmt(mumty)} sft</div><div class="l">Mumty ${unplanned?'(fixed cap)':'(¼ of GF)'}</div></div>
+     <div><div class="v">${gcEff.toFixed(1)}%</div><div class="l">Effective ground coverage</div></div>`;
+
+  // ---- table ----
+  const T=(a,b,g)=>`<tr><td class="l">${a}</td><td class="v">${b}${g?G(g):''}</td></tr>`;
+  document.getElementById('resultTable').innerHTML =
+    `<tr><th class="l" style="text-align:left">Parameter</th><th>Your allowance</th></tr>`+
+    T('Storeys / max height', `${row.st} (Ground + First) · ${row.ht}′ from road level`, 's5') +
+    T('Setbacks — Front / Side-1 / Side-2 / Rear', `${ft(F)} / ${S1?ft(S1):'–'} / ${S2?ft(S2):'–'} / ${ft(R)}${relaxed?' <b>(relaxed side applied)</b>':''}`, 's8') +
+    T('Buildable block', `${ft(bw)} × ${ft(bd)} = <b>${fmt(gf)} sft</b>`, 's4') +
+    T('Ground floor covered', fmt(gf)+' sft (full block)', 's4') +
+    T('First floor covered', fmt(ff)+' sft (full block)', 's4') +
+    T('Mumty (stair tower)', `${fmt(mumty)} sft · ≤10′ high · width ≤ ${ft(maxMumtyW)} (≤${detached?'⅓':'½'} of ${W}′) · depth must exceed width (≈${ft(mumtyDepthNeeded)} deep at max width) · stair + <b>1 room + 1 bath</b>, NO kitchen/unit`, 's6') +
+    T('Car porch (in setback)', `${unplanned? fmt(porchCap)+' sft max' : (detached?'200 single / 400 double sft per unit':'≈ '+fmt(porchCap)+' sft max')} · ≤⅔ of setback · open ${detached?'2':'1'} side(s)`, 's9') +
+    T('Basement', wantBase? `Allowed under 100% of GF block (≈${fmt(gf)} sft) leaving setbacks · <b>not counted</b> in covered area · 8′-6″–12′ clear · mechanical drainage + 3′×3′ exit required` : 'Not planned — basement would be extra, non-counted area', 's7') +
+    T('Dwelling units', `<b>${units}</b> (${unplanned?'practice: ≤16M → 1':'<488 sq.yd → 1 · ≥488 → 2'})`, 's11') +
+    T('Max plinth', ft(row.plinth), 's5') +
+    T('Trees in street green belt', `<b>${trees}</b> (frontage band) · no cutting w/o permission`, 's12') +
+    T('Rainwater harvesting', rain? '<b>Mandatory</b> (≥400 sq. yd.) — OH + UG tanks on drawings' : 'Not mandatory (plots ≥400 sq. yd. only)', 's12') +
+    T('Servant room + bath', servant? '<b>Mandatory</b> (≥501 sq. yd.)' : 'Not mandatory (plots ≥501 sq. yd. only)', 's12') +
+    T('Est. scrutiny fee', `≈ Rs ${fmt(fee)} @ Rs 6/sft on ${fmt(total+(wantBase?gf:0))} sft (roofed${wantBase?' + basement':''}) — confirm current schedule`, 's14') +
+    (unplanned? T('Regularization (existing) / approval', 'Scrutiny Rs 6/sft + regularization Rs 100/sft + land-conversion charges; 30′ min street (else 15′ from centreline); sewage/solid-waste plan; undertaking for conversion/development charges', 's18') : '');
+
+  // ---- SVG plan ----
+  const VW=780, VH=430, mx=88, my=64, aw=VW-mx-96, ah=VH-my-64;
+  const sc = Math.min(aw/W, ah/D), pw=W*sc, pd=D*sc, ox=mx+(aw-pw)/2, oy=my+(ah-pd)/2;
+  const f=F*sc, s1=S1*sc, s2=S2*sc, r=R*sc;
+  const porchW = Math.min(pw*0.45, 200), porchH = Math.min(f*0.62, 60);
+  const px = ox+pw/2-porchW/2, py = oy+f-porchH-4;
+  document.getElementById('planSvg').innerHTML =
+  `<svg viewBox="0 0 ${VW} ${VH}" role="img">
+    <text x="${VW/2}" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Your plot — setbacks &amp; buildable block (to scale)</text>
+    <rect x="${ox}" y="${oy}" width="${pw}" height="${pd}" fill="#f2f7f4" stroke="#073d2a" stroke-width="3"/>
+    <rect x="${ox}" y="${oy}" width="${pw}" height="${f}" fill="#faf3dd" opacity="0.9"/>
+    <rect x="${ox}" y="${oy+pd-r}" width="${pw}" height="${r}" fill="#faf3dd" opacity="0.9"/>
+    ${S1?`<rect x="${ox}" y="${oy+f}" width="${s1}" height="${pd-f-r}" fill="#faf3dd" opacity="0.9"/>`:''}
+    ${S2?`<rect x="${ox+pw-s2}" y="${oy+f}" width="${s2}" height="${pd-f-r}" fill="#faf3dd" opacity="0.9"/>`:''}
+    <rect x="${ox+s1}" y="${oy+f}" width="${pw-s1-s2}" height="${pd-f-r}" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2.5"/>
+    <rect x="${px}" y="${py}" width="${porchW}" height="${porchH}" fill="#fff" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="${ox+pw/2}" y="${oy+f/2-2}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4d3d05">FRONT ${ft(F)} · porch ≤${unplanned?fmt(porchCap):(detached?'400':'')}${!unplanned&&!detached?fmt(row.porch):''} sft</text>
+    <text x="${ox+pw/2}" y="${oy+pd-r/2+4}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4d3d05">REAR ${ft(R)}</text>
+    ${S1?`<text x="${ox+s1/2}" y="${oy+pd/2}" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4d3d05" transform="rotate(-90 ${ox+s1/2} ${oy+pd/2})">S1 ${ft(S1)}</text>`:''}
+    ${S2?`<text x="${ox+pw-s2/2}" y="${oy+pd/2}" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4d3d05" transform="rotate(-90 ${ox+pw-s2/2} ${oy+pd/2})">S2 ${ft(S2)}</text>`:''}
+    ${!S1&&!S2?`<text x="${ox+pw/2}" y="${oy+pd+18}" text-anchor="middle" font-size="11.5" fill="#5b6b62">party walls both sides (no side setbacks)</text>`:''}
+    <text x="${ox+s1+(pw-s1-s2)/2}" y="${oy+f+(pd-f-r)/2-6}" text-anchor="middle" font-size="14" font-weight="800" fill="#073d2a">BLOCK ${ft(bw)} × ${ft(bd)}</text>
+    <text x="${ox+s1+(pw-s1-s2)/2}" y="${oy+f+(pd-f-r)/2+12}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">${fmt(gf)} sft · GF + FF</text>
+    <line x1="${ox}" y1="${oy+pd+34}" x2="${ox+pw}" y2="${oy+pd+34}" stroke="#073d2a" stroke-width="1.5"/>
+    <text x="${ox+pw/2}" y="${oy+pd+52}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">${W}′ frontage</text>
+    <line x1="${ox+pw+16}" y1="${oy}" x2="${ox+pw+16}" y2="${oy+pd}" stroke="#073d2a" stroke-width="1.5"/>
+    <text x="${ox+pw+32}" y="${oy+pd/2}" font-size="12.5" font-weight="700" fill="#073d2a" transform="rotate(-90 ${ox+pw+32} ${oy+pd/2})" text-anchor="middle">${D}′ deep</text>
+    <text x="${ox+pw/2}" y="${oy-10}" text-anchor="middle" font-size="11.5" fill="#5b6b62">▼ ROAD / FRONT</text>
+   </svg>`;
+  document.getElementById('planCap').innerHTML =
+    `<b>Yellow</b> = compulsory open space (porch/projections/pergola only, per rules) · <b>Green</b> = buildable block (${fmt(gf)} sft on EACH floor) · Dashed = schematic porch position in front setback.`;
+
+  // ---- mumty bar ----
+  const mw2 = 700, mx2=40, bwbar = (W/W)*mw2, mwbar = (maxMumtyW/W)*mw2;
+  document.getElementById('mumtySvg').innerHTML =
+  `<svg viewBox="0 0 780 150" role="img">
+    <text x="390" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#073d2a">Mumty max width vs your ${W}′ frontage (front view, to scale)</text>
+    <rect x="${mx2}" y="45" width="${mw2}" height="26" rx="4" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+    <text x="${mx2+mw2/2}" y="63" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">Plot width ${W}′</text>
+    <rect x="${mx2+mw2/2-mwbar/2}" y="82" width="${mwbar}" height="26" rx="4" fill="#faf3dd" stroke="#c9a227" stroke-width="2"/>
+    <text x="${mx2+mw2/2}" y="100" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4d3d05">Mumty ≤ ${ft(maxMumtyW)} (≤${detached?'⅓':'½'}) · ${fmt(mumty)} sft · ≤10′ high</text>
+    <text x="390" y="130" text-anchor="middle" font-size="12" fill="#5b6b62">Rule: width &lt; depth — at max width the mumty must run ≈${ft(mumtyDepthNeeded)} deep (front-to-back) to hold ${fmt(mumty)} sft · stair + 1 room + 1 bath · NO kitchen/unit</text>
+   </svg>`;
+  document.getElementById('mumtyCap').innerHTML = mumtyCap
+    ? `<b>Capped at 600 sft</b> (detached). A narrower mumty needs more depth — keep width &lt; depth always.`
+    : `A narrower mumty needs more depth — keep width &lt; depth always.`;
+
+  // ---- reminders ----
+  const rem = [
+    `Only <b>2 storeys + mumty</b>; nothing else on the roof except tanks (set back, unobtrusive), 3′ parapet, antennas — <b>no mobile antenna</b>.`,
+    `Projections: GF/FF ≤3′ (relax 3′-6″), FF-on-terrace ≤5′ (relax 5′-6″), mumty ≤3′ — never &gt;½ the setback; excess = demolition.`,
+    `Balcony ≤3′ only where setback ≥10′ and gap to neighbour ≥15′ · bay window ≤2′-6″ (counts in area) · pergola wood/bamboo uncovered ≤${detached?'200':'100'} sft.`,
+    `Boundary wall <b>3′–7′ on the plot line</b>; nothing built outside it; no septic tank; pools only with permission.`,
+    units>1 ? `Two units permitted — porch/area split per unit; no third unit via mumty.` : `One unit only on this plot — the mumty room cannot become a second unit.`,
+    wantBase ? `Basement: RCC 9″ walls, mechanical sewage + separate storm disposal, 3′×3′ emergency exit, neighbour NOCs where triggered (terraced: 5′ offset rule).` : `If you add a basement later it needs revised approval + neighbour NOCs.`,
+    `Completion certificate is <b>mandatory before occupation</b> (Rs 50,000/yr fine for living in without it); plan valid 5 years.`
+  ];
+  document.getElementById('reminders').innerHTML =
+    rem.map(r=>`<div class="call rule" style="margin:8px 0">✔ ${r}</div>`).join('');
+
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+
+function showNoMatch(sqyd,W,neg){
+  document.getElementById('results').style.display='block';
+  document.getElementById('rowInfo').innerHTML = `<div class="call warn"><b>⛔ ${neg?'Setbacks exceed plot dimensions':'No Schedule-1 row fits'}:</b> ${fmt(sqyd)} sq. yd. / ${W}′ frontage. ${neg?'The required setbacks leave no buildable block — recheck dimensions.':'This combination falls outside all gazetted bands (max 2,720 sq. yd. / 100′+ frontage).'} Please verify demarcation and consult CDA Building Control — do not design on assumed values.</div>`;
+  document.getElementById('warnings').innerHTML='';
+  document.getElementById('kpis').innerHTML='';
+  document.getElementById('resultTable').innerHTML='';
+  document.getElementById('planSvg').innerHTML='';
+  document.getElementById('planCap').innerHTML='';
+  document.getElementById('mumtySvg').innerHTML='';
+  document.getElementById('mumtyCap').innerHTML='';
+  document.getElementById('reminders').innerHTML='';
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+zoneChange();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a385787ccbb6411e',t:'MTc4ODk0OTMzNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
