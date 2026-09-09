@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDA Islamabad — Residential Construction Rules | Complete Reference Guide</title>
+<style>
+  :root{
+    --green:#0b5c3f; --green-dark:#073d2a; --green-light:#e7f4ec;
+    --gold:#c9a227; --gold-light:#faf3dd;
+    --ink:#1c2420; --muted:#5b6b62; --line:#d9e4dc;
+    --card:#ffffff; --bg:#f4f7f5;
+    --red:#b3261e; --red-bg:#fdecea;
+    --blue:#0b5cad; --blue-bg:#e8f1fb;
+    --amber:#8a5a00; --amber-bg:#fff4d6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.65;font-size:16px}
+  .page{max-width:960px;margin:0 auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.08)}
+  /* COVER */
+  .cover{background:linear-gradient(160deg,var(--green-dark) 0%,var(--green) 60%,#0e7a53 100%);
+    color:#fff;padding:56px 48px 40px;position:relative;overflow:hidden}
+  .cover::after{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;
+    background:rgba(255,255,255,.06)}
+  .cover::before{content:"";position:absolute;right:60px;bottom:-120px;width:220px;height:220px;border-radius:50%;
+    background:rgba(255,255,255,.05)}
+  .badge{display:inline-block;background:var(--gold);color:#20301f;font-weight:700;font-size:12.5px;
+    letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px}
+  .cover h1{margin:0 0 10px;font-size:38px;line-height:1.15;font-weight:800}
+  .cover h1 span{color:var(--gold)}
+  .cover p.sub{margin:0 0 22px;font-size:17px;color:#dcebe3;max-width:640px}
+  .cover-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .cover-meta div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+    padding:8px 14px;border-radius:8px;font-size:13.5px}
+  .cover-meta b{color:var(--gold)}
+  /* BODY */
+  .content{padding:10px 48px 60px}
+  h2.sec{font-size:24px;color:var(--green-dark);margin:44px 0 6px;padding-top:18px;
+    border-top:3px solid var(--green);display:flex;align-items:center;gap:12px}
+  h2.sec .num{background:var(--green);color:#fff;width:38px;height:38px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+  h3{font-size:18px;color:var(--green-dark);margin:26px 0 8px}
+  h4{font-size:16px;color:var(--ink);margin:20px 0 6px}
+  p{margin:10px 0}
+  .lede{font-size:17px;color:#33413a}
+  a{color:var(--blue)}
+  /* TOC */
+  .toc{background:var(--green-light);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:26px 0}
+  .toc h3{margin:0 0 10px;color:var(--green-dark)}
+  .toc ol{margin:0;padding-left:22px;columns:2;column-gap:36px}
+  .toc li{margin:5px 0;font-size:14.5px}
+  .toc a{color:var(--green-dark);text-decoration:none;font-weight:600}
+  .toc a:hover{text-decoration:underline}
+  /* TABLES */
+  .tbl-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th{background:var(--green);color:#fff;padding:10px 8px;text-align:center;font-size:13px;
+    text-transform:uppercase;letter-spacing:.4px}
+  td{padding:9px 8px;border-top:1px solid var(--line);text-align:center;vertical-align:top}
+  tr:nth-child(even) td{background:#f6faf8}
+  td.l,th.l{text-align:left;padding-left:12px}
+  .grp td{background:var(--gold-light)!important;font-weight:800;color:#4d3d05;text-align:left;
+    padding-left:12px;font-size:14px}
+  .hl{background:#fff3bf!important;font-weight:700}
+  /* CALLOUTS */
+  .call{border-radius:10px;padding:14px 18px;margin:16px 0;font-size:15px;border-left:6px solid}
+  .call b.t{display:block;margin-bottom:4px;font-size:14px;text-transform:uppercase;letter-spacing:.6px}
+  .rule{background:var(--green-light);border-color:var(--green)}
+  .rule b.t{color:var(--green-dark)}
+  .warn{background:var(--red-bg);border-color:var(--red)}
+  .warn b.t{color:var(--red)}
+  .tip{background:var(--blue-bg);border-color:var(--blue)}
+  .tip b.t{color:var(--blue)}
+  .note{background:var(--amber-bg);border-color:var(--gold)}
+  .note b.t{color:var(--amber)}
+  /* FIGURE */
+  figure.fig{margin:20px 0;border:1px solid var(--line);border-radius:12px;background:#fff;
+    padding:16px 12px 8px;text-align:center}
+  figure.fig svg{max-width:100%;height:auto}
+  figcaption{font-size:13.5px;color:var(--muted);padding:8px 12px 10px}
+  figcaption b{color:var(--ink)}
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0}
+  .step{background:var(--green-light);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px}
+  .step .n{display:inline-block;background:var(--green);color:#fff;font-weight:800;width:26px;height:26px;
+    border-radius:50%;text-align:center;line-height:26px;margin-right:8px;font-size:14px}
+  /* CHECKLIST */
+  ul.check{list-style:none;padding:0}
+  ul.check li{padding:8px 8px 8px 38px;position:relative;border-bottom:1px dashed var(--line);font-size:15px}
+  ul.check li::before{content:"☐";position:absolute;left:10px;color:var(--green);font-weight:800;font-size:18px;top:5px}
+  /* CARDS */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:14px 0}
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fff}
+  .card.top{border-top:5px solid var(--gold)}
+  .card h4{margin:0 0 6px;color:var(--green-dark);font-size:16px}
+  .card p,.card li{font-size:14px}
+  .card ul{margin:6px 0;padding-left:18px}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+  .kpi div{flex:1;min-width:150px;background:var(--green-dark);color:#fff;border-radius:10px;
+    padding:14px;text-align:center}
+  .kpi .v{font-size:26px;font-weight:800;color:var(--gold)}
+  .kpi .l{font-size:13px;color:#d7e7de}
+  footer{background:var(--green-dark);color:#cfe3d8;padding:30px 48px;font-size:13.5px}
+  footer h3{color:#fff;margin-top:0}
+  footer a{color:var(--gold)}
+  .print-btn{display:inline-block;background:var(--gold);color:#20301f;font-weight:700;border:none;
+    padding:10px 22px;border-radius:8px;font-size:15px;cursor:pointer;margin-top:14px}
+  @media print{
+    body{background:#fff;font-size:12px}
+    .page{box-shadow:none;max-width:100%}
+    .content{padding:0 6px}
+    .cover{padding:30px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .cover h1{font-size:28px}
+    h2.sec{page-break-after:avoid;font-size:19px}
+    figure.fig,.tbl-wrap,.call{page-break-inside:avoid}
+    .print-btn,.noprint{display:none}
+    th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  @media(max-width:640px){.content{padding:10px 20px 40px}.cover{padding:36px 24px}.cover h1{font-size:28px}.toc ol{columns:1}}
+  /* ---- Cross-navigation UX: animated calculator banner + floating button ---- */
+  .calc-banner{display:flex;align-items:center;gap:14px;margin-top:16px;padding:14px 18px;border-radius:12px;
+    background:linear-gradient(120deg,#fff 55%,var(--green-light));border:2px solid var(--green);
+    text-decoration:none;color:var(--ink);position:relative;overflow:hidden;
+    box-shadow:0 2px 10px rgba(11,92,63,.12);transition:transform .25s ease,box-shadow .25s ease}
+  .calc-banner:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(11,92,63,.22)}
+  .calc-banner::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;
+    background:linear-gradient(105deg,transparent,rgba(201,162,39,.35),transparent);
+    animation:sheen 3.4s ease-in-out infinite}
+  @keyframes sheen{0%{left:-70%}55%{left:130%}100%{left:130%}}
+  .cb-icon{font-size:30px;flex:none;animation:nudge 2.4s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(8deg) translateY(-2px)}}
+  .cb-text b{display:block;color:var(--green-dark);font-size:16px}
+  .cb-text small{color:var(--muted);font-size:13.5px}
+  .cb-arrow{margin-left:auto;flex:none;background:var(--gold);color:#20301f;font-weight:800;font-size:20px;
+    width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    animation:arrowPush 1.8s ease-in-out infinite}
+  @keyframes arrowPush{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+  .fab{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:9px;
+    background:var(--green-dark);color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;
+    padding:13px 20px 13px 16px;border-radius:50px;box-shadow:0 6px 20px rgba(0,0,0,.3);
+    transition:transform .25s ease,box-shadow .25s ease}
+  .fab:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  .fab::before{content:"";position:absolute;inset:-4px;border-radius:60px;border:2px solid var(--gold);
+    animation:ringPulse 2.2s ease-out infinite;pointer-events:none}
+  @keyframes ringPulse{0%{opacity:.9;transform:scale(.97)}70%{opacity:0;transform:scale(1.08)}100%{opacity:0}}
+  .tryit{display:inline-block;background:var(--gold-light);border:1.5px solid var(--gold);border-radius:8px;
+    padding:2px 10px;font-size:14px;text-decoration:none!important;color:#4d3d05!important;font-weight:700;
+    transition:background .2s ease}
+  .tryit:hover{background:var(--gold);color:#20301f!important}
+  @media (prefers-reduced-motion:reduce){
+    .calc-banner::after,.cb-icon,.cb-arrow,.fab::before{animation:none!important}
+    .calc-banner,.fab,.tryit{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ================= COVER ================= -->
+<div class="cover">
+  <div class="badge">Reference Guide for Architects, Builders &amp; Homeowners</div>
+  <h1>CDA Islamabad<br><span>Residential Construction Rules</span></h1>
+  <p class="sub">Covered area, floors, setbacks, mumty, basement, porch &amp; projections, room sizes, housing units, extra/adjoining land, approvals and penalties — everything needed to plan and design a house on any CDA plot size, in one illustrated document.</p>
+  <div class="cover-meta">
+    <div>Legal basis: <b>ICT Residential Sectors Zoning (Building Control) Regulations 2020</b> — S.R.O. 1575(I)/2019, notified 26 Dec 2019</div>
+    <div>Applies to: <b>all residential plots in Islamabad Capital Territory</b> (except Diplomatic Enclave)</div>
+    <div>Guide compiled: <b>September 2026</b> · Always verify current fees &amp; amendments at CDA One Window Operation</div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ================= TOC ================= -->
+<div class="toc">
+  <h3>📑 Contents</h3>
+  <ol>
+    <li><a href="#s1">How to use this guide (design workflow)</a></li>
+    <li><a href="#s2">Plot categories &amp; size conversions</a></li>
+    <li><a href="#s3">Master table — what you can build on each plot size</a></li>
+    <li><a href="#s4">Covered area rules + worked examples</a></li>
+    <li><a href="#s5">Storeys, height &amp; plinth</a></li>
+    <li><a href="#s6">Mumty / stair tower — complete rules</a></li>
+    <li><a href="#s7">Basement rules</a></li>
+    <li><a href="#s8">Setbacks (compulsory open spaces)</a></li>
+    <li><a href="#s9">Porch, projections, balcony, bay window, pergola, stairs</a></li>
+    <li><a href="#s10">Minimum room sizes</a></li>
+    <li><a href="#s11">Housing units, sub-division &amp; amalgamation</a></li>
+    <li><a href="#s12">Servant quarters, boundary wall, trees, water, pools &amp; more</a></li>
+    <li><a href="#s13">Extra / adjoining / excess land — the rules</a></li>
+    <li><a href="#s14">Approval → construction → completion &amp; penalties</a></li>
+    <li><a href="#s15">Pre-submission design checklist</a></li>
+    <li><a href="#s16">Farmhouses in approved schemes (Zone II/IV/V)</a></li>
+    <li><a href="#s17">Agro / orchard / poultry-vegetable farms (Zone IV)</a></li>
+    <li><a href="#s18">Unplanned houses in Zone II / IV / V</a></li>
+    <li><a href="#s19">Apartment buildings — parameters</a></li>
+    <li><a href="#s20">Sources &amp; disclaimer</a></li>
+  </ol>
+  <a class="calc-banner noprint" href="calculator.html">
+    <span class="cb-icon">📐</span>
+    <span class="cb-text"><b>Try the interactive Plot Design Calculator</b><small>Enter any plot's width × depth → rule row, setbacks, covered area, mumty, porch + scaled diagram, instantly</small></span>
+    <span class="cb-arrow">→</span>
+  </a>
+  <button class="print-btn noprint" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<!-- ================= S1 ================= -->
+<h2 class="sec" id="s1"><span class="num">1</span> How to use this guide (design workflow)</h2>
+<p class="lede">To design a CDA-compliant house on <b>any</b> plot size, follow these seven steps in order. Each step points to the section with exact figures.</p>
+<div class="steps">
+  <div class="step"><span class="n">1</span><b>Fix your plot facts</b> — exact size (sq. yd.), frontage (ft), dimensions &amp; orientation from the allotment letter and on-site demarcation. (§2)</div>
+  <div class="step"><span class="n">2</span><b>Find your row</b> in the Master Table using <b>both</b> size <i>and</i> frontage — terraced, semi-detached or detached. (§3)</div>
+  <div class="step"><span class="n">3</span><b>Draw the buildable block</b> = plot minus compulsory setbacks. That block may be covered on <b>both</b> floors. (§4, §8)</div>
+  <div class="step"><span class="n">4</span><b>Set the vertical envelope</b> — 2 storeys, max 30 ft height, plinth cap, mumty on top. (§5, §6)</div>
+  <div class="step"><span class="n">5</span><b>Add basement, porch, projections</b> strictly within their own limits. (§7, §9)</div>
+  <div class="step"><span class="n">6</span><b>Fit rooms</b> to minimum sizes; place servant quarter, stairs, tanks, trees. (§10, §12)</div>
+  <div class="step"><span class="n">7</span><b>Run the pre-submission checklist</b> before your architect files for approval. (§15)</div>
+</div>
+<p>⚡ <b>Shortcut:</b> the companion <a class="tryit noprint" href="calculator.html">📐 Plot Design Calculator →</a> auto-generates steps 2–4 for any plot dimensions.</p>
+<div class="call rule"><b class="t">✅ The single most important concept</b>
+Under the 2020 Regulations there is <b>no fixed ground-coverage percentage or FAR number for dwelling houses</b>. The rule is: <b>“construction may cover a block, leaving compulsory setbacks”</b> — on ground <i>and</i> first floor (Reg. 2.1.8 &amp; Schedule-1). Your covered area is therefore decided by your <b>setbacks</b>, which depend on plot size + frontage. Old percentage rules (60%/50%) no longer apply.</div>
+
+<!-- ================= S2 ================= -->
+<h2 class="sec" id="s2"><span class="num">2</span> Plot categories &amp; size conversions</h2>
+<h3>2.1 The three development types</h3>
+<div class="cards">
+  <div class="card top"><h4>🏘️ Terraced / Attached (Type A)</h4>
+    <p>Houses in a row sharing <b>party walls on both sides</b>. No side setbacks. Plots <b>up to 450 sq. yd.</b> with frontage <b>20–49 ft</b>. Typical: 5, 7, 8, 10 &amp; 14 marla.</p></div>
+  <div class="card top"><h4>🏠 Semi-Detached (Type B)</h4>
+    <p>Pair of houses sharing <b>one party wall</b>, open yard on the other side. Plots <b>300–625 sq. yd.</b>, frontage <b>40–49 ft</b>. One side setback of <b>5 ft</b>.</p></div>
+  <div class="card top"><h4>🏡 Detached (Type C &amp; D)</h4>
+    <p>Standalone house, open on <b>all four sides</b>. Plots <b>400–2,720 sq. yd.</b>, frontage <b>50 ft and above</b>. Typical: 1 kanal and above.</p></div>
+</div>
+<div class="call note"><b class="t">📌 Type is decided by size + frontage together</b>
+Schedule-1 Note (vii): the development type of a plot is determined considering <b>both</b> size and frontage. If your plot's size and frontage fall in different rows (e.g. large area but narrow frontage), CDA Building Control decides the applicable row — confirm before designing. For irregular plots, size/frontage = <b>average of front and rear dimensions</b> (Note iv).</div>
+
+<h3>2.2 Marla / kanal / sq. yd. / sq. ft. converter</h3>
+<div class="tbl-wrap"><table>
+  <tr><th>Unit</th><th>Equals</th><th class="l">Common CDA plot sizes (≈)</th></tr>
+  <tr><td><b>1 marla</b></td><td>30.25 sq. yd. = 272.25 sft</td><td class="l"><b>5 marla</b> ≈ 125 sq. yd. · <b>7 marla</b> ≈ 212 sq. yd. · <b>8 marla</b> ≈ 242 sq. yd.</td></tr>
+  <tr><td><b>1 kanal</b> (20 marla)</td><td>605 sq. yd. = 5,445 sft</td><td class="l"><b>10 marla</b> ≈ 250–300 sq. yd. · <b>14 marla</b> ≈ 350 sq. yd. · <b>1 kanal</b> ≈ 500–600 sq. yd. · <b>2 kanal</b> ≈ 1,000 sq. yd.</td></tr>
+</table></div>
+<p style="font-size:14px;color:var(--muted)">Actual CDA allotments vary by sector (e.g. “1 kanal” may be allotted as 500, 550 or 600 sq. yd.). Always design from your allotment letter + demarcated site dimensions, not the market label.</p>
+
+<figure class="fig">
+<svg viewBox="0 0 860 250" role="img" aria-label="Plot category scale">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Plot-size scale → development type (frontage decides together with size)</text>
+  <line x1="40" y1="120" x2="820" y2="120" stroke="#0b5c3f" stroke-width="3"/>
+  <polygon points="820,120 806,112 806,128" fill="#0b5c3f"/>
+  <!-- ticks -->
+  <g font-size="12" fill="#1c2420" text-anchor="middle">
+    <line x1="80" y1="110" x2="80" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="80" y="148">0</text>
+    <line x1="200" y1="110" x2="200" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="200" y="148">150</text>
+    <line x1="290" y1="110" x2="290" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="290" y="148">300</text>
+    <line x1="380" y1="110" x2="380" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="380" y="148">450–488</text>
+    <line x1="500" y1="110" x2="500" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="500" y="148">625–1,000</text>
+    <line x1="660" y1="110" x2="660" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="660" y="148">1,670</text>
+    <line x1="790" y1="110" x2="790" y2="130" stroke="#0b5c3f" stroke-width="2"/><text x="790" y="148">2,720 sq.yd.</text>
+  </g>
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="60" y="52" width="230" height="44" rx="8" fill="#e7f4ec" stroke="#0b5c3f"/>
+    <text x="175" y="70" fill="#073d2a">TERRACED (A)</text>
+    <text x="175" y="88" font-weight="400" font-size="12" fill="#33413a">up to 450 sq.yd · 20–49 ft</text>
+    <rect x="300" y="52" width="170" height="44" rx="8" fill="#faf3dd" stroke="#c9a227"/>
+    <text x="385" y="70" fill="#4d3d05">SEMI-DET. (B)</text>
+    <text x="385" y="88" font-weight="400" font-size="12" fill="#4d3d05">300–625 · 40–49 ft</text>
+    <rect x="480" y="52" width="320" height="44" rx="8" fill="#e8f1fb" stroke="#0b5cad"/>
+    <text x="640" y="70" fill="#0b3a6b">DETACHED (C &amp; D)</text>
+    <text x="640" y="88" font-weight="400" font-size="12" fill="#0b3a6b">400–2,720 · 50 ft &amp; above</text>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#5b6b62">
+    <text x="200" y="172">1 unit · party walls both sides</text>
+    <text x="385" y="172">1 unit · party wall one side</text>
+    <text x="640" y="172">2 units · open all four sides</text>
+    <text x="430" y="196" font-weight="700" fill="#b3261e">▲ 488 sq.yd. = the 1-unit / 2-unit dividing line (Reg. 4.1.6)</text>
+    <line x1="392" y1="150" x2="392" y2="182" stroke="#b3261e" stroke-width="2" stroke-dasharray="4 3"/>
+  </g>
+  <text x="430" y="228" text-anchor="middle" font-size="12" fill="#5b6b62">5 marla ≈125 · 10 marla ≈250–300 · 14 marla ≈350 · 1 kanal ≈500–600 · 2 kanal ≈1,000 sq.yd.</text>
+</svg>
+<figcaption><b>Figure 1 —</b> Development type bands by plot size. Your exact row in the Master Table (§3) is fixed by <b>size + frontage together</b>.</figcaption>
+</figure>
+
+<!-- ================= S3 ================= -->
+<h2 class="sec" id="s3"><span class="num">3</span> Master table — what you can build on each plot size</h2>
+<p class="lede">Direct transcription of <b>Schedule-1</b> of the 2020 Regulations (dwelling houses). Setbacks are in feet; “–” means no setback on that side (party wall).</p>
+<div class="tbl-wrap"><table>
+  <tr>
+    <th class="l">Type</th><th>Plot size<br>(sq. yd.)</th><th>Frontage<br>(ft)</th>
+    <th>Storeys</th><th>Max<br>height</th>
+    <th>Front</th><th>Side-1</th><th>Side-2</th><th>Rear</th>
+    <th>Max<br>units</th><th>Max car<br>porch (sft)</th><th>Max mumty</th><th>Max<br>plinth</th>
+  </tr>
+  <tr class="grp"><td colspan="13">TERRACED (ATTACHED) &amp; SEMI-DETACHED DWELLING HOUSES — basement allowed leaving setbacks · plinth 3′-6″</td></tr>
+  <tr><td class="l"><b>Terraced A</b></td><td>Up to 150</td><td>20–29</td><td>2</td><td>30′</td><td>5′</td><td>–</td><td>–</td><td>5′</td><td>1</td><td>100</td><td rowspan="5" class="hl">¼ of ground-floor permissible block area</td><td rowspan="5">3′-6″</td></tr>
+  <tr><td class="l"><b>Terraced A</b></td><td>151–200</td><td>25–30</td><td>2</td><td>30′</td><td>6′</td><td>–</td><td>–</td><td>6′</td><td>1</td><td>150</td></tr>
+  <tr><td class="l"><b>Terraced A</b></td><td>201–300</td><td>30–39</td><td>2</td><td>30′</td><td>10′</td><td>–</td><td>–</td><td>8′</td><td>1</td><td>160</td></tr>
+  <tr><td class="l"><b>Terraced A</b></td><td>300–450</td><td>40–49</td><td>2</td><td>30′</td><td>10′</td><td>–</td><td>4′</td><td>10′</td><td>1</td><td>200</td></tr>
+  <tr><td class="l"><b>Semi-det. B</b></td><td>300–625</td><td>40–49</td><td>2</td><td>30′</td><td>10′</td><td>–</td><td>5′</td><td>10′</td><td>1</td><td>200</td></tr>
+  <tr class="grp"><td colspan="13">DETACHED DWELLING HOUSES — basement allowed leaving setbacks · plinth 5′-0″ · single 200 / double 400 sft porch per unit</td></tr>
+  <tr><td class="l"><b>Detached C</b></td><td>400–1,000</td><td>50–59</td><td>2</td><td>30′</td><td>15′</td><td>5′</td><td>5′</td><td>10′</td><td>2</td><td>200/400</td><td rowspan="6" class="hl">¼ of GF block area,<br>max 600 sft</td><td rowspan="6">5′-0″</td></tr>
+  <tr><td class="l"><b>Detached C</b></td><td>530–1,335</td><td>60–69</td><td>2</td><td>30′</td><td>15′</td><td>10′</td><td>5′</td><td>10′</td><td>2</td><td>200/400</td></tr>
+  <tr><td class="l"><b>Detached C</b></td><td>700–1,670</td><td>70–79</td><td>2</td><td>30′</td><td>20′</td><td>10′</td><td>10′</td><td>10′</td><td>2</td><td>200/400</td></tr>
+  <tr><td class="l"><b>Detached D</b></td><td>885–2,670</td><td>80–89</td><td>2</td><td>30′</td><td>25′</td><td>10′</td><td>10′</td><td>10′</td><td>2</td><td>200/400</td></tr>
+  <tr><td class="l"><b>Detached D</b></td><td>800–2,900</td><td>90–99</td><td>2</td><td>30′</td><td>30′</td><td>10′</td><td>10′</td><td>10′</td><td>2</td><td>200/400</td></tr>
+  <tr><td class="l"><b>Detached D</b></td><td>1,770–2,720</td><td>100+</td><td>2</td><td>30′</td><td>40′</td><td>15′</td><td>15′</td><td>10′</td><td>2</td><td>200/400</td></tr>
+</table></div>
+<div class="call note"><b class="t">📌 Notes attached to Schedule-1</b>
+<b>(a)</b> Smaller side setback goes on the <b>south or west</b> side (whichever applies to orientation). &nbsp;<b>(b)</b> Double porch up to <b>400 sft max</b>, subject to space. &nbsp;<b>(c)</b> Terraced porch figures (100–200 sft) are “subject to available area/space”. &nbsp;<b>(d)</b> Basement only under plinth area, leaving setbacks (§7). &nbsp;<b>(e)</b> One room + one small washroom allowed in mumty; <b>no kitchen, no independent unit</b> on rooftop (§6).</div>
+
+<!-- ================= S4 ================= -->
+<h2 class="sec" id="s4"><span class="num">4</span> Covered area rules + worked examples</h2>
+<h3>4.1 The formula (all dwelling houses)</h3>
+<div class="kpi">
+  <div><div class="v">Block</div><div class="l">= Plot minus compulsory setbacks (all sides)</div></div>
+  <div><div class="v">GF + FF</div><div class="l">= The block may be fully covered on BOTH floors (Reg. 2.1.8)</div></div>
+  <div><div class="v">+ Mumty</div><div class="l">= ¼ of GF block (detached: capped at 600 sft)</div></div>
+  <div><div class="v">+ Basement</div><div class="l">= Extra, NOT counted in permissible covered area</div></div>
+</div>
+<div class="call rule"><b class="t">✅ What counts / does not count</b>
+<b>Counted:</b> all roofed floor areas incl. verandahs, bay windows, porch area falling inside the block, 25% of pergola area, stair halls. Measured externally (wall to wall). &nbsp;<b>NOT counted:</b> basement/cellar/vault area, roof projections (chajja) within Schedule-3/4 limits, projections over setbacks within limits. Basement area <b>is</b> still counted for scrutiny-fee and property-tax calculation.</div>
+<div class="call warn"><b class="t">⛔ Excess covered area = demolition</b>
+Reg. 2.4.2 / 4.1.7: any covered area beyond Schedule-1 limits <b>shall be demolished</b> — it cannot be regularized by paying a fine. Only minor deviations up to <b>5%</b>, with <b>prior</b> Authority approval, may be compounded with charges (Reg. 2.4.3). Design inside the envelope.</div>
+
+<h3>4.2 Worked examples for common CDA plot sizes</h3>
+<p>Illustrative calculations using typical dimensions. <b>Always recompute from your own demarcated plot.</b> (Porch sits in the setback and is extra to the block; basement is extra and not counted in covered area.) Have your own dimensions? <a class="tryit noprint" href="calculator.html">Compute your exact plot →</a></p>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Example plot</th><th>Type / row</th><th>Setbacks F·S·R</th><th class="l">Buildable block (GF)</th><th>GF+FF</th><th>Mumty (¼ GF)</th><th class="l">≈ Total roofed*</th></tr>
+  <tr><td><b>5 marla</b><br>25′ × 45′ (125 sq. yd.)</td><td>A ≤150</td><td>5′ · – · 5′</td><td class="l">25 × 35 = <b>875 sft</b></td><td>1,750</td><td>≈ 219</td><td class="l"><b>≈ 1,969 sft</b> + 100 porch</td></tr>
+  <tr><td><b>7 marla</b><br>30′ × 52.5′ (175 sq. yd.)</td><td>A 151–200</td><td>6′ · – · 6′</td><td class="l">30 × 40.5 = <b>1,215 sft</b></td><td>2,430</td><td>≈ 304</td><td class="l"><b>≈ 2,734 sft</b> + 150 porch</td></tr>
+  <tr><td><b>10 marla</b><br>35′ × 65′ (252 sq. yd.)</td><td>A 201–300</td><td>10′ · – · 8′</td><td class="l">35 × 47 = <b>1,645 sft</b></td><td>3,290</td><td>≈ 411</td><td class="l"><b>≈ 3,701 sft</b> + 160 porch</td></tr>
+  <tr><td><b>14 marla</b><br>40′ × 79′ (351 sq. yd.)</td><td>A 300–450</td><td>10′ · 4′ · 10′</td><td class="l">36 × 59 = <b>2,124 sft</b></td><td>4,248</td><td>≈ 531</td><td class="l"><b>≈ 4,779 sft</b> + 200 porch</td></tr>
+  <tr><td><b>1 kanal</b><br>50′ × 100′ (556 sq. yd.)</td><td>Det-C</td><td>15′ · 5′/5′ · 10′</td><td class="l">40 × 75 = <b>3,000 sft</b></td><td>6,000</td><td>600 (cap)</td><td class="l"><b>≈ 6,600 sft</b> + 400 porch</td></tr>
+  <tr><td><b>2 kanal</b><br>80′ × 113′ (1,004 sq. yd.)</td><td>Det-D</td><td>25′ · 10′/10′ · 10′</td><td class="l">60 × 78 = <b>4,680 sft</b></td><td>9,360</td><td>600 (cap)</td><td class="l"><b>≈ 9,960 sft</b> + 400 porch</td></tr>
+</table></div>
+<p style="font-size:13.5px;color:var(--muted)">* Roofed total = GF + FF + mumty, before projections. Effective ground coverage in these examples ≈ 55–70% (terraced) and ≈ 42–49% (detached) — the natural result of the setback table, not a separate limit.</p>
+
+<figure class="fig">
+<svg viewBox="0 0 860 330" role="img" aria-label="Covered area build-up chart">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">How the covered area builds up (illustrative examples)</text>
+  <g font-size="12.5" font-weight="700" fill="#1c2420">
+    <text x="118" y="70" text-anchor="end">5 marla</text>
+    <text x="118" y="110" text-anchor="end">7 marla</text>
+    <text x="118" y="150" text-anchor="end">10 marla</text>
+    <text x="118" y="190" text-anchor="end">14 marla</text>
+    <text x="118" y="230" text-anchor="end">1 kanal</text>
+    <text x="118" y="270" text-anchor="end">2 kanal</text>
+  </g>
+  <g font-size="11.5" fill="#fff" font-weight="700">
+    <!-- scale: 10000 sft = 640px -->
+    <rect x="130" y="54" width="56" height="24" rx="3" fill="#0b5c3f"/><rect x="186" y="54" width="56" height="24" rx="3" fill="#2e9e6b"/><rect x="242" y="54" width="14" height="24" rx="3" fill="#c9a227"/>
+    <rect x="130" y="94" width="78" height="24" rx="3" fill="#0b5c3f"/><rect x="208" y="94" width="78" height="24" rx="3" fill="#2e9e6b"/><rect x="286" y="94" width="19" height="24" rx="3" fill="#c9a227"/>
+    <rect x="130" y="134" width="105" height="24" rx="3" fill="#0b5c3f"/><rect x="235" y="134" width="105" height="24" rx="3" fill="#2e9e6b"/><rect x="340" y="134" width="26" height="24" rx="3" fill="#c9a227"/>
+    <rect x="130" y="174" width="136" height="24" rx="3" fill="#0b5c3f"/><rect x="266" y="174" width="136" height="24" rx="3" fill="#2e9e6b"/><rect x="402" y="174" width="34" height="24" rx="3" fill="#c9a227"/>
+    <rect x="130" y="214" width="192" height="24" rx="3" fill="#0b5c3f"/><text x="226" y="231" text-anchor="middle">GF 3,000</text><rect x="322" y="214" width="192" height="24" rx="3" fill="#2e9e6b"/><text x="418" y="231" text-anchor="middle">FF 3,000</text><rect x="514" y="214" width="38" height="24" rx="3" fill="#c9a227"/>
+    <rect x="130" y="254" width="300" height="24" rx="3" fill="#0b5c3f"/><text x="280" y="271" text-anchor="middle">GF 4,680</text><rect x="430" y="254" width="300" height="24" rx="3" fill="#2e9e6b"/><text x="580" y="271" text-anchor="middle">FF 4,680</text><rect x="730" y="254" width="38" height="24" rx="3" fill="#c9a227"/>
+  </g>
+  <g font-size="12" fill="#1c2420" font-weight="700">
+    <text x="262" y="71">≈1,969</text><text x="311" y="111">≈2,734</text><text x="372" y="151">≈3,701</text>
+    <text x="442" y="191">≈4,779</text><text x="558" y="231">≈6,600</text><text x="774" y="271">≈9,960 sft</text>
+  </g>
+  <g font-size="13" font-weight="700">
+    <rect x="130" y="296" width="16" height="16" rx="3" fill="#0b5c3f"/><text x="152" y="309" fill="#1c2420">Ground floor block</text>
+    <rect x="330" y="296" width="16" height="16" rx="3" fill="#2e9e6b"/><text x="352" y="309" fill="#1c2420">First floor block</text>
+    <rect x="520" y="296" width="16" height="16" rx="3" fill="#c9a227"/><text x="542" y="309" fill="#1c2420">Mumty (¼ of GF)</text>
+  </g>
+</svg>
+<figcaption><b>Figure 2 —</b> Total roofed area ≈ GF block + FF block + mumty. Basement is additional and not counted in permissible covered area. Porch (in setback) is additional within its own cap.</figcaption>
+</figure>
+
+<div class="call tip"><b class="t">🔄 A note on old percentage rules (pre-2020)</b>
+Before 2020, CDA Schedule-A fixed ground coverage at <b>60%</b> (terraced) / <b>50%</b> (detached), FAR at 1.2/1.05/0.90/0.85, and stair-tower caps at 150/200/250 sft. The 2020 Regulations <b>replaced</b> that system with setback-based coverage + ¼-GF mumty. If a contractor or old drawing quotes “60%/50% coverage”, it is outdated — but note the new setback geometry produces broadly similar footprints.</div>
+
+<!-- ================= S5 ================= -->
+<h2 class="sec" id="s5"><span class="num">5</span> Storeys, height &amp; plinth</h2>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Parameter</th><th>Rule (all dwelling houses)</th><th>Reference</th></tr>
+  <tr><td class="l"><b>Number of storeys</b></td><td><b>2 — Ground + First only.</b> No second floor / third storey on any residential plot size.</td><td>Schedule-1</td></tr>
+  <tr><td class="l"><b>Maximum height</b></td><td><b>30′-0″</b> from <b>mean level of front road</b> to highest part of roof. Building must <b>look like two storeys from the front</b>.</td><td>Schedule-1; 2.6.1(vi)</td></tr>
+  <tr><td class="l"><b>Excluded from height</b></td><td>Overhead water tank, parapet wall, stair hall / mumty, lift room etc. are <b>not</b> counted in overall height.</td><td>4.1.5</td></tr>
+  <tr><td class="l"><b>Plinth level (max)</b></td><td><b>3′-6″</b> above road — terraced/semi-detached · <b>5′-0″</b> — detached.</td><td>Schedule-1</td></tr>
+  <tr><td class="l"><b>Split-level plots</b></td><td>Any floor whose roof is <b>≤ 5′-0″ above mean road level</b> = basement (not counted). Roof <b>&gt; 5′-0″</b> = ground floor (counted).</td><td>2.6.1(iv)</td></tr>
+  <tr><td class="l"><b>Depressed / raised sites</b></td><td>Front yard level may not be raised/lowered &gt; <b>2′-0″</b> vs road. On abnormally high plots, porch + stair hall allowed max <b>2′-0″</b> above road.</td><td>2.6.1(iii)(v)</td></tr>
+  <tr><td class="l"><b>Floor-to-floor height</b></td><td>No fixed cap in the Regulations — design freely <b>within the 30′ envelope</b>, respecting 9′-0″ minimum room heights (§10).</td><td>—</td></tr>
+</table></div>
+
+<figure class="fig">
+<svg viewBox="0 0 860 380" role="img" aria-label="House section with heights">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Vertical envelope — section through a detached house (not to scale)</text>
+  <!-- ground -->
+  <rect x="60" y="300" width="740" height="26" fill="#9c7a54"/>
+  <text x="70" y="318" font-size="12" fill="#fff" font-weight="700">MEAN FRONT ROAD LEVEL (all heights measured from here)</text>
+  <!-- basement -->
+  <rect x="220" y="300" width="330" height="0" fill="none"/>
+  <rect x="220" y="252" width="330" height="48" fill="#dfe9f5" stroke="#0b5cad" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="385" y="272" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0b3a6b">BASEMENT (8′-6″–12′ clear) — not counted</text>
+  <text x="385" y="288" text-anchor="middle" font-size="11.5" fill="#0b3a6b">100% under GF block · leaving setbacks</text>
+  <!-- GF -->
+  <rect x="220" y="168" width="330" height="84" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+  <text x="385" y="204" text-anchor="middle" font-size="14" font-weight="700" fill="#073d2a">GROUND FLOOR</text>
+  <text x="385" y="222" text-anchor="middle" font-size="12" fill="#33413a">full block · plinth ≤ 5′-0″ (det.) / 3′-6″ (terr.)</text>
+  <!-- FF -->
+  <rect x="220" y="84" width="330" height="84" fill="#eef7f0" stroke="#0b5c3f" stroke-width="2"/>
+  <text x="385" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#073d2a">FIRST FLOOR</text>
+  <text x="385" y="136" text-anchor="middle" font-size="12" fill="#33413a">full block · max 30′-0″ to top of roof</text>
+  <!-- mumty -->
+  <rect x="330" y="36" width="150" height="48" fill="#faf3dd" stroke="#c9a227" stroke-width="2"/>
+  <text x="405" y="55" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4d3d05">MUMTY ≤ 10′-0″</text>
+  <text x="405" y="70" text-anchor="middle" font-size="11" fill="#4d3d05">stair + 1 room + bath</text>
+  <!-- parapet -->
+  <rect x="220" y="72" width="110" height="12" fill="none" stroke="#0b5c3f" stroke-width="2"/>
+  <rect x="480" y="72" width="70" height="12" fill="none" stroke="#0b5c3f" stroke-width="2"/>
+  <text x="600" y="80" font-size="11.5" fill="#33413a">parapet 3′ (not in height)</text>
+  <line x1="550" y1="78" x2="592" y2="79" stroke="#33413a"/>
+  <!-- OHWT -->
+  <rect x="560" y="52" width="70" height="32" fill="#dfe9f5" stroke="#0b5cad" stroke-width="1.5"/>
+  <text x="595" y="65" text-anchor="middle" font-size="10.5" fill="#0b3a6b">OHWT</text>
+  <text x="595" y="77" text-anchor="middle" font-size="10" fill="#0b3a6b">not in height</text>
+  <!-- height dimension -->
+  <line x1="170" y1="300" x2="170" y2="84" stroke="#b3261e" stroke-width="2"/>
+  <polygon points="170,84 165,94 175,94" fill="#b3261e"/><polygon points="170,300 165,290 175,290" fill="#b3261e"/>
+  <text x="160" y="195" text-anchor="middle" font-size="14" font-weight="800" fill="#b3261e" transform="rotate(-90 160 195)">MAX 30′-0″</text>
+  <line x1="150" y1="300" x2="190" y2="300" stroke="#b3261e" stroke-width="2"/>
+  <line x1="150" y1="84" x2="220" y2="84" stroke="#b3261e" stroke-width="2" stroke-dasharray="4 3"/>
+  <!-- mumty dim -->
+  <line x1="500" y1="84" x2="500" y2="36" stroke="#8a5a00" stroke-width="2"/>
+  <polygon points="500,36 495,46 505,46" fill="#8a5a00"/><polygon points="500,84 495,74 505,74" fill="#8a5a00"/>
+  <text x="512" y="62" font-size="12" font-weight="700" fill="#8a5a00">10′</text>
+  <!-- plinth -->
+  <line x1="600" y1="300" x2="600" y2="252" stroke="#0b5cad" stroke-width="2"/>
+  <text x="612" y="280" font-size="11.5" fill="#0b3a6b">plinth ≤ 5′/3′-6″</text>
+  <text x="430" y="352" text-anchor="middle" font-size="12.5" fill="#5b6b62">Only <b>2 storeys + mumty</b> permitted · mumty, tanks, parapet &amp; stair hall excluded from the 30′ height</text>
+</svg>
+<figcaption><b>Figure 3 —</b> The vertical envelope. Everything must fit under 30′ from road level; the mumty (≤10′) sits above it and is not counted in height.</figcaption>
+</figure>
+
+<!-- ================= S6 ================= -->
+<h2 class="sec" id="s6"><span class="num">6</span> Mumty / stair tower — complete rules</h2>
+<p class="lede">The mumty is the <b>only</b> structure allowed above the first-floor roof of a dwelling house (besides tanks, parapet, antennas). All of these conditions apply <b>together</b>.</p>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:26%">Rule</th><th>Terraced / attached houses</th><th>Detached houses</th></tr>
+  <tr><td class="l"><b>Maximum area</b></td><td><b>¼ (25%) of GF permissible block area</b></td><td><b>¼ of GF block, capped at 600 sft</b></td></tr>
+  <tr><td class="l"><b>Width (as seen from front road)</b></td><td>≤ <b>½ of plot width</b></td><td>≤ <b>⅓ of plot width</b></td></tr>
+  <tr><td class="l"><b>Shape</b></td><td colspan="2">Width (front) must be <b>smaller than depth</b> — a deep, narrow tower, not a wide box</td></tr>
+  <tr><td class="l"><b>Height</b></td><td colspan="2"><b>10′-0″ maximum</b> (other buildings: 8′). Not counted in the 30′ building height.</td></tr>
+  <tr><td class="l"><b>Rooms allowed inside</b></td><td colspan="2"><b>Stair hall + ONE room/sleeping space + ONE small washroom</b> — within the permissible mumty area</td></tr>
+  <tr><td class="l"><b>Strictly prohibited</b></td><td colspan="2"><b>No kitchen, no independent / lettable unit</b> on the rooftop or along the mumty</td></tr>
+  <tr><td class="l"><b>Roof projection over mumty</b></td><td colspan="2"><b>3′-0″</b> max (relaxable to 3′-6″ with fine); never more than half the setback width</td></tr>
+  <tr><td class="l"><b>On sub-divided plots</b></td><td colspan="2">Mumty size follows the <b>category of the sub-divided portion</b></td></tr>
+</table></div>
+<div class="call warn"><b class="t">⛔ “One room” means one room</b>
+Common rejection/demolition triggers: mumty <b>wider</b> than ½ (terraced) or ⅓ (detached) of plot width; mumty area beyond ¼ of GF block (or 600 sft); a <b>kitchenette/kitchen</b> or a second room making it an independent unit; using the mumty roof for further construction. Width violations and excess mumty area are listed among observations that lead to <b>demolition at completion stage</b>.</div>
+
+<figure class="fig">
+<svg viewBox="0 0 860 360" role="img" aria-label="Mumty width rules and sample layout">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Mumty width rule (front view) + a compliant sample layout (plan)</text>
+  <!-- Terraced front view -->
+  <text x="215" y="52" text-anchor="middle" font-size="13.5" font-weight="700" fill="#073d2a">TERRACED — mumty ≤ ½ plot width</text>
+  <rect x="65" y="170" width="300" height="110" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+  <rect x="65" y="110" width="300" height="60" fill="#eef7f0" stroke="#0b5c3f" stroke-width="2"/>
+  <rect x="140" y="62" width="150" height="48" fill="#faf3dd" stroke="#c9a227" stroke-width="2"/>
+  <text x="215" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4d3d05">MUMTY ≤ ½ W</text>
+  <text x="215" y="97" text-anchor="middle" font-size="10.5" fill="#4d3d05">depth &gt; width</text>
+  <line x1="65" y1="300" x2="365" y2="300" stroke="#0b5c3f" stroke-width="1.5"/>
+  <polygon points="65,300 75,296 75,304" fill="#0b5c3f"/><polygon points="365,300 355,296 355,304" fill="#0b5c3f"/>
+  <text x="215" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#073d2a">Plot width W</text>
+  <text x="215" y="336" text-anchor="middle" font-size="11.5" fill="#5b6b62">e.g. 35′ plot → mumty ≤ 17′-6″ wide</text>
+  <!-- Detached front view -->
+  <text x="640" y="52" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0b3a6b">DETACHED — mumty ≤ ⅓ plot width</text>
+  <rect x="470" y="170" width="340" height="110" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+  <rect x="470" y="110" width="340" height="60" fill="#eef7f0" stroke="#0b5c3f" stroke-width="2"/>
+  <rect x="583" y="62" width="113" height="48" fill="#e8f1fb" stroke="#0b5cad" stroke-width="2"/>
+  <text x="640" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0b3a6b">MUMTY ≤ ⅓ W</text>
+  <text x="640" y="97" text-anchor="middle" font-size="10.5" fill="#0b3a6b">depth &gt; width</text>
+  <line x1="470" y1="300" x2="810" y2="300" stroke="#0b5c3f" stroke-width="1.5"/>
+  <polygon points="470,300 480,296 480,304" fill="#0b5c3f"/><polygon points="810,300 800,296 800,304" fill="#0b5c3f"/>
+  <text x="640" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#073d2a">Plot width W</text>
+  <text x="640" y="336" text-anchor="middle" font-size="11.5" fill="#5b6b62">e.g. 50′ plot → mumty ≤ 16′-8″ wide</text>
+</svg>
+<figcaption><b>Figure 4 —</b> The mumty must read as a narrow stair tower from the street. On a 50′-wide detached plot the mumty may be at most ~16′-8″ wide — while its depth must exceed its width.</figcaption>
+</figure>
+
+<figure class="fig">
+<svg viewBox="0 0 860 300" role="img" aria-label="Sample compliant mumty plan">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Sample compliant mumty plan — 1-kanal detached plot (50′ wide)</text>
+  <text x="430" y="44" text-anchor="middle" font-size="12.5" fill="#5b6b62">Capsule check: ¼ of 3,000 sft GF block = 750 → capped at 600 sft · width ≤ ⅓ × 50′ = 16′-8″ · depth &gt; width ✓</text>
+  <!-- mumty block 16 x 24 = 384 sft -->
+  <rect x="230" y="60" width="400" height="180" fill="#faf3dd" stroke="#4d3d05" stroke-width="2.5"/>
+  <line x1="230" y1="150" x2="630" y2="150" stroke="#4d3d05" stroke-width="1.5"/>
+  <line x1="430" y1="60" x2="430" y2="150" stroke="#4d3d05" stroke-width="1.5"/>
+  <line x1="380" y1="150" x2="380" y2="240" stroke="#4d3d05" stroke-width="1.5"/>
+  <!-- stair -->
+  <g font-size="11" fill="#4d3d05">
+    <rect x="230" y="60" width="200" height="90" fill="#fff" opacity="0.55"/>
+    <text x="330" y="92" text-anchor="middle" font-weight="700" font-size="13">STAIR HALL</text>
+    <text x="330" y="108" text-anchor="middle">arrival from first floor</text>
+    <text x="330" y="124" text-anchor="middle">door to roof terrace →</text>
+  </g>
+  <!-- bath -->
+  <text x="530" y="92" text-anchor="middle" font-weight="700" font-size="13" fill="#4d3d05">WASHROOM</text>
+  <text x="530" y="108" text-anchor="middle" font-size="11" fill="#4d3d05">small · ventilated</text>
+  <text x="530" y="124" text-anchor="middle" font-size="11" fill="#4d3d05">(WC + basin)</text>
+  <!-- room -->
+  <text x="505" y="190" text-anchor="middle" font-weight="700" font-size="13" fill="#4d3d05">ONE ROOM / SLEEPING SPACE</text>
+  <text x="505" y="206" text-anchor="middle" font-size="11" fill="#4d3d05">within mumty area · min 100 sft, 8′-6″ wide, 9′ high (§10)</text>
+  <!-- terrace door -->
+  <rect x="230" y="150" width="150" height="90" fill="#e7f4ec" opacity="0.7"/>
+  <text x="305" y="190" text-anchor="middle" font-weight="700" font-size="12" fill="#073d2a">OPEN</text>
+  <text x="305" y="206" text-anchor="middle" font-size="11" fill="#073d2a">TERRACE</text>
+  <!-- dims -->
+  <line x1="230" y1="258" x2="630" y2="258" stroke="#b3261e" stroke-width="1.5"/>
+  <text x="430" y="275" text-anchor="middle" font-size="12.5" font-weight="700" fill="#b3261e">depth 24′-0″ (front-to-back)</text>
+  <line x1="212" y1="60" x2="212" y2="240" stroke="#b3261e" stroke-width="1.5"/>
+  <text x="200" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#b3261e" transform="rotate(-90 200 150)">width 16′-0″ ≤ 16′-8″ ✓</text>
+  <text x="700" y="140" font-size="12.5" font-weight="700" fill="#073d2a">384 sft ≤ 600 ✓</text>
+  <text x="700" y="160" font-size="11.5" fill="#b3261e" font-weight="700">✗ NO kitchen</text>
+  <text x="700" y="178" font-size="11.5" fill="#b3261e" font-weight="700">✗ NO 2nd room / unit</text>
+  <text x="700" y="196" font-size="11.5" fill="#073d2a">✓ height ≤ 10′-0″</text>
+</svg>
+<figcaption><b>Figure 5 —</b> One compliant way to use a ~384 sft mumty: stair + one room + one bath. A kitchen/kitchenette or any second room would make it an illegal independent unit.</figcaption>
+</figure>
+
+<!-- ================= S7 ================= -->
+<h2 class="sec" id="s7"><span class="num">7</span> Basement rules</h2>
+<div class="call rule"><b class="t">✅ The basement advantage</b>
+Basement area is <b>not counted</b> in FAR / permissible covered area and not counted as a storey (Reg. 2.6.1(ii)(xix)) — but it <b>is</b> counted for scrutiny fee and property tax. Detached houses may build basement under <b>100% of the permissible ground-floor coverage</b> (Reg. 2.6.1(ix)).</div>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:30%">Item</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Location</b></td><td class="l">Only <b>under the plinth area</b>, leaving all minimum setbacks. <b>Never inside setbacks</b> — except a driveway bridge over natural depression, or storage under the driveway where depression exceeds 8′.</td></tr>
+  <tr><td class="l"><b>Terraced houses</b></td><td class="l">Full basement under plinth allowed if adjoining plots are <b>vacant or already have basements</b>. Otherwise leave <b>5′-0″</b> from the neighbour's property line + cantilevered foundations.</td></tr>
+  <tr><td class="l"><b>Clear height</b></td><td class="l"><b>8′-6″ min – 12′-0″ max</b>. If used for habitable purposes, the room rules of §10 apply.</td></tr>
+  <tr><td class="l"><b>Construction</b></td><td class="l">External walls below ground: min <b>9″ RCC</b>, waterproofed, designed for earth pressure.</td></tr>
+  <tr><td class="l"><b>Drainage (critical)</b></td><td class="l"><b>Mechanical disposal</b> (sump/sludge pump) to upper level in <b>all</b> cases — no gravity connection that can back-flow; separate storm-water disposal to CDA mains. CDA accepts no responsibility for back-flow flooding.</td></tr>
+  <tr><td class="l"><b>Safety</b></td><td class="l">Min <b>one 3′ × 3′ emergency exit</b> opening outside (all non-open basements); proper escape routes; protect adjoining structures/boundary walls during excavation.</td></tr>
+  <tr><td class="l"><b>Neighbour protection</b></td><td class="l"><b>Prior CDA permission + neighbour NOC</b> if any underground part of the adjacent building may be exposed; bank guarantee @ <b>Rs 500/sft</b> of adjacent building otherwise (non-dwelling cases). Owner + contractor jointly liable for damage.</td></tr>
+  <tr><td class="l"><b>Lowering side/rear yards</b></td><td class="l">May be lowered (max <b>6′-0″</b> below mean road level) with <b>compulsory RCC retaining wall at plot line</b>, proper drainage, and full responsibility for stability of neighbours. <b>Front setback: never lowered more than 2′-0″.</b></td></tr>
+  <tr><td class="l"><b>Open basement</b></td><td class="l">Allowed other than in front setback; outside entries (e.g. servant entry from rear/side) allowed; may house <b>servant quarters</b> with proper light, ventilation &amp; hygiene.</td></tr>
+  <tr><td class="l"><b>Servant use</b></td><td class="l">Basement may be used for servant quarters subject to proper light, ventilation and hygienic standards.</td></tr>
+</table></div>
+
+<!-- ================= S8 ================= -->
+<h2 class="sec" id="s8"><span class="num">8</span> Setbacks (compulsory open spaces)</h2>
+<p class="lede"><b>Nothing</b> may be built in a setback except the specific items listed in this section and §9. “Any kind of structure in the compulsory setback” is a demolition trigger at completion stage.</p>
+<figure class="fig">
+<svg viewBox="0 0 860 420" role="img" aria-label="Sample 1-kanal plot plan with setbacks">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Reading a plot plan — sample 1-kanal detached plot, 50′ × 100′</text>
+  <!-- plot -->
+  <rect x="130" y="50" width="600" height="300" fill="#f2f7f4" stroke="#073d2a" stroke-width="3"/>
+  <text x="140" y="70" font-size="12" font-weight="700" fill="#073d2a">PLOT LINE 50′ × 100′ (556 sq.yd.)</text>
+  <text x="720" y="70" font-size="11" fill="#5b6b62" text-anchor="end">ROAD ↓ FRONT</text>
+  <!-- setbacks shading: front 15, sides 5, rear 10. scale: 600px=100' => 6px/ft horizontal; vertical 300px=50'? plot drawn 600 wide x300 tall for 100' x 50'?? Let's treat drawing: width 600px = 50' ... simpler: schematic, label only -->
+  <!-- buildable block -->
+  <rect x="190" y="140" width="480" height="160" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2.5"/>
+  <text x="430" y="205" text-anchor="middle" font-size="15" font-weight="800" fill="#073d2a">BUILDABLE BLOCK 40′ × 75′ = 3,000 sft</text>
+  <text x="430" y="226" text-anchor="middle" font-size="12.5" fill="#33413a">may be covered on GF <b>and</b> FF · basement under 100% of it</text>
+  <text x="430" y="244" text-anchor="middle" font-size="12.5" fill="#33413a">mumty = ¼ → capped at 600 sft</text>
+  <!-- front setback -->
+  <rect x="130" y="50" width="600" height="90" fill="#faf3dd" opacity="0.85"/>
+  <text x="430" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#4d3d05">FRONT SETBACK 15′ — porch (≤400 double) + projections ≤3′</text>
+  <rect x="250" y="60" width="180" height="70" fill="#fff" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="340" y="88" text-anchor="middle" font-size="11.5" fill="#4d3d05">PORCH ≤ ⅔ of</text>
+  <text x="340" y="103" text-anchor="middle" font-size="11.5" fill="#4d3d05">setback, open 2 sides</text>
+  <!-- rear -->
+  <rect x="130" y="300" width="600" height="50" fill="#faf3dd" opacity="0.85"/>
+  <text x="430" y="330" text-anchor="middle" font-size="13" font-weight="700" fill="#4d3d05">REAR SETBACK 10′</text>
+  <!-- sides -->
+  <rect x="130" y="140" width="60" height="160" fill="#faf3dd" opacity="0.85"/>
+  <rect x="670" y="140" width="60" height="160" fill="#faf3dd" opacity="0.85"/>
+  <text x="160" y="225" text-anchor="middle" font-size="12" font-weight="700" fill="#4d3d05" transform="rotate(-90 160 225)">SIDE 5′</text>
+  <text x="700" y="225" text-anchor="middle" font-size="12" font-weight="700" fill="#4d3d05" transform="rotate(-90 700 225)">SIDE 5′</text>
+  <!-- dims -->
+  <line x1="130" y1="368" x2="730" y2="368" stroke="#073d2a" stroke-width="1.5"/>
+  <text x="430" y="386" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">50′-0″ frontage</text>
+  <line x1="748" y1="50" x2="748" y2="350" stroke="#073d2a" stroke-width="1.5"/>
+  <text x="762" y="200" font-size="12.5" font-weight="700" fill="#073d2a" transform="rotate(-90 762 200)">100′-0″ depth</text>
+  <text x="430" y="408" text-anchor="middle" font-size="12" fill="#5b6b62">Yellow = compulsory open space (no structures except porch / projections / pergola / open stairs / bay window per rules) · Green = buildable block</text>
+</svg>
+<figcaption><b>Figure 6 —</b> Schematic plan (not to scale). Setbacks carve the buildable block out of the plot; the block then decides your covered area on both floors.</figcaption>
+</figure>
+<h3>8.1 Setback relaxations you can claim</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Situation</th><th class="l">Relaxation</th></tr>
+  <tr><td class="l"><b>Side faces open space / nullah</b> (not a road/street)</td><td class="l">That setback relaxable up to <b>50%</b> — provided total permissible covered area is not exceeded.</td></tr>
+  <tr><td class="l"><b>Irregular / odd-shaped plot</b></td><td class="l">Setbacks may be fixed/relaxed to give suitable allowance in coverage.</td></tr>
+  <tr><td class="l"><b>Composition (paid, residential only)</b></td><td class="l">Up to <b>20%</b> relaxation via Member (Planning &amp; Design) approval <b>after</b> standard plan approval; FAR unchanged. Front deviation up to 50% @ <b>Rs 5,000/sq. yd.</b>; rear/side up to 10% <b>free</b>, up to 20% @ <b>Rs 5,000/sft</b>. (Confirm current schedule at CDA.)</td></tr>
+</table></div>
+
+<!-- ================= S9 ================= -->
+<h2 class="sec" id="s9"><span class="num">9</span> Porch, projections, balcony, bay window, pergola, stairs</h2>
+<h3>9.1 Car porch</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Item</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Max area</b></td><td class="l">Terraced: <b>100 / 150 / 160 / 200 sft</b> per Master-Table row · Detached: <b>single 200 / double 400 sft per unit</b> (double max 400 total). Two disconnected porches in one setback allowed if <b>≥10′ apart</b>; combined ≤ <b>300 sft</b> (setback ≤10′) or <b>400 sft</b> (setback &gt;10′).</td></tr>
+  <tr><td class="l"><b>Footprint in setback</b></td><td class="l">Preferably ≤ <b>½ of setback both ways</b>; never more than <b>⅔</b>. Any excess must be absorbed inside the building block. Porch area inside the block <b>counts</b> in covered area.</td></tr>
+  <tr><td class="l"><b>Size limits</b></td><td class="l">Min width <b>9′-0″</b> · length/depth incl. projections ≤ <b>26′</b> (single) / <b>32′</b> (double) in detached houses. No height restriction.</td></tr>
+  <tr><td class="l"><b>Openness</b></td><td class="l">Open at least <b>one side</b> (terraced) / <b>two sides</b> (detached). <b>No habitable space under a porch</b> (demolition trigger). Roof usable as terrace only with <b>privacy screen</b> for neighbours.</td></tr>
+  <tr><td class="l"><b>Corner plots &gt;300 sq. yd.</b></td><td class="l"><b>One extra 150 sft porch</b> (max 15′ long) allowed in the <b>rear</b> setback. Number of porches = number of permissible living units.</td></tr>
+  <tr><td class="l"><b>Drainage</b></td><td class="l">Porch roof water must drain <b>within the plot</b>. Pergola-type porch roof allowed (no area relaxation).</td></tr>
+</table></div>
+<h3>9.2 Roof projections / chajja in setbacks (Schedule-4)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th>Floor</th><th>Max projection</th><th>Relaxable with fine up to</th></tr>
+  <tr><td>Ground floor</td><td><b>3′-0″</b></td><td>3′-6″</td></tr>
+  <tr><td>First floor</td><td><b>3′-0″</b></td><td>3′-6″</td></tr>
+  <tr><td>First floor <b>on terrace only</b></td><td><b>5′-0″</b></td><td>5′-6″</td></tr>
+  <tr><td>Stair tower / mumty</td><td><b>3′-0″</b></td><td>3′-6″</td></tr>
+</table></div>
+<div class="call rule"><b class="t">✅ Projection essentials</b>
+Projections within these limits are <b>not counted</b> in FAR/covered area — but a projection may <b>never cover more than half the width of any setback</b> at any floor, and anything beyond the relaxable limit <b>will be demolished</b>. Supported projections on decorative columns are likewise excluded only if otherwise compliant.</div>
+<h3>9.3 Terraced-house projections over public street / open land (Schedule-3)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th>Street / open-land width</th><th>Permissible projection</th><th>Relaxable with fine up to</th></tr>
+  <tr><td>20′-0″ and less</td><td><b>1′-6″</b></td><td>2′-0″</td></tr>
+  <tr><td>21′-0″ to 40′-0″</td><td><b>2′-0″</b></td><td>2′-6″</td></tr>
+  <tr><td>More than 40′-0″</td><td><b>2′-6″</b></td><td>3′-0″</td></tr>
+</table></div>
+<h3>9.4 Balcony · bay window · pergola · open stairs · decorative features</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Element</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Balconies</b></td><td class="l">May project up to <b>3′-0″</b> into setbacks that are <b>≥10′-0″</b> wide, only where the gap between buildings on adjacent plots is <b>≥15′-0″</b>. Must be shown on approved plans.</td></tr>
+  <tr><td class="l"><b>Bay windows</b></td><td class="l">Projection ≤ <b>25% of setback width</b>, max <b>2′-6″</b> out, max <b>8′-0″</b> long, max <b>2 per setback</b>. Area <b>counts</b> in FAR/covered area.</td></tr>
+  <tr><td class="l"><b>Pergolas in setback</b></td><td class="l"><b>Wood/bamboo only, uncovered</b> (roof ≥75% open to sky). Max <b>100 sft</b> (terraced) / <b>200 sft</b> (detached). 25% of pergola area counts in floor area.</td></tr>
+  <tr><td class="l"><b>Open stairs in setback</b></td><td class="l">Only in <b>rear/side</b> setbacks. Spiral <b>5′–6′</b> wide; straight <b>2′-9″–3′-3″</b> incl. railing. <b>Never as the main access</b> to the first floor. <b>3′ visual barrier at 3′ height</b> alongside stair/passage and in front of servant rooms.</td></tr>
+  <tr><td class="l"><b>Decorative / landscape features</b></td><td class="l">Small features <b>not higher than the compound wall</b>, as approved on plan, allowed in front setback.</td></tr>
+</table></div>
+
+<!-- ================= S10 ================= -->
+<h2 class="sec" id="s10"><span class="num">10</span> Minimum room sizes (Schedule-2)</h2>
+<p class="lede">Every space must meet these minima. Area/height/width shortfalls up to <b>10%</b> are relaxable <b>with penalty</b> — design to the full minima.</p>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Space</th><th>Min area</th><th>Min height</th><th>Min width</th><th>Relaxable to (penalty)</th></tr>
+  <tr><td class="l"><b>Living unit</b></td><td>600 sft excl. stairs</td><td>9′-0″</td><td>–</td><td>10% / 8′-6″</td></tr>
+  <tr><td class="l"><b>Habitable rooms</b> (bed, drawing, lounge…)</td><td><b>100 sft</b></td><td><b>9′-0″</b></td><td><b>8′-6″</b></td><td>10% / 8′-6″ / 8′-0″</td></tr>
+  <tr><td class="l"><b>Kitchen</b></td><td><b>45 sft</b></td><td><b>8′-6″</b></td><td><b>5′-0″</b></td><td>10% / 8′-0″ / 4′-9″</td></tr>
+  <tr><td class="l"><b>Bathroom / toilet</b></td><td><b>24 sft</b></td><td><b>7′-0″</b></td><td><b>3′-0″</b></td><td>10% / 6′-6″ / 2′-9″</td></tr>
+  <tr><td class="l"><b>W.C.</b></td><td>12 sft</td><td>7′-0″</td><td>3′-0″</td><td>10% / 6′-6″ / 2′-9″</td></tr>
+  <tr><td class="l"><b>WC + basin</b></td><td>15 sft</td><td>7′-0″</td><td>3′-0″</td><td>10% / 6′-6″ / 2′-9″</td></tr>
+  <tr><td class="l"><b>Shower only</b></td><td>12 sft</td><td>7′-0″</td><td>3′-0″</td><td>10% / 6′-6″ / 2′-9″</td></tr>
+  <tr><td class="l"><b>Powder/toilet under stairs</b> (ventilated WC+basin only)</td><td>15 sft</td><td>6′-6″</td><td>3′-0″</td><td>10% / 6′-0″ / 2′-9″</td></tr>
+  <tr><td class="l"><b>Porches</b></td><td>As per Schedule-1</td><td>7′-6″</td><td>9′-0″</td><td>10% / 7′-0″ / 8′-6″</td></tr>
+  <tr><td class="l"><b>Doors</b></td><td colspan="2">Min height <b>7′-0″</b></td><td colspan="2">6′-6″ w/o penalty · 6′-0″ with penalty</td></tr>
+  <tr><td class="l"><b>Headroom under stairs</b> (where passage provided)</td><td colspan="2">Min <b>6′-6″</b></td><td colspan="2">6′-3″ w/o penalty · 6′-0″ with penalty</td></tr>
+</table></div>
+<div class="call tip"><b class="t">💡 Practical consequences</b>
+Basement rooms used for habitation must meet these same standards. Internal ventilation wells / open-to-sky shafts should be <b>≥ 50 sft</b> (below that attracts heavy fines at completion per Building Control practice). Staircase risers/treads/widths and step counts must be dimensioned on the drawings.</div>
+
+<!-- ================= S11 ================= -->
+<h2 class="sec" id="s11"><span class="num">11</span> Housing units, sub-division &amp; amalgamation</h2>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Item</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Units per undivided plot</b></td><td class="l"><b>Below 488 sq. yd. → ONE unit · 488 sq. yd. &amp; above → TWO units</b> (within permissible covered area). Consistent with Schedule-1: terraced/semi = 1, detached = 2.</td></tr>
+  <tr><td class="l"><b>Amalgamation</b></td><td class="l"><b>Allowed on all plots</b> with an adjoining plot(s), with <b>prior Authority approval</b>.</td></tr>
+  <tr><td class="l"><b>Sub-division (one bifurcation)</b></td><td class="l"><b>Prior approval mandatory.</b> §2.3.3: plots <b>≥1,000 sq. yd.</b>, each portion <b>≥500 sq. yd.</b>, <b>one unit per portion</b>; original plot's FAR/coverage/setbacks continue to govern <b>both</b> portions jointly. Plots abutting one road only: rear portion gets <b>independent access lane from within the front portion</b> (lane owned by rear plot); each portion <b>≥600 sq. yd.</b> in that case.</td></tr>
+</table></div>
+<div class="call warn"><b class="t">⚠️ Internal inconsistency — confirm with CDA</b>
+§4.1.6 separately states sub-division is allowed only for plots <b>≥1,200 sq. yd.</b> with each portion <b>≥600 sq. yd.</b> (vs §2.3.3's 1,000/500). The Regulations contradict themselves here — <b>get a written ruling from Building Control / Member (Planning &amp; Design) before buying or designing around a sub-division.</b> Mumty on sub-divided portions follows each portion's category.</div>
+
+<!-- ================= S12 ================= -->
+<h2 class="sec" id="s12"><span class="num">12</span> Servant quarters, boundary wall, trees, water, pools &amp; more</h2>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:26%">Item</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Servant room</b></td><td class="l"><b>Mandatory: min 1 servant room + bathroom</b> in every house on plots <b>≥501 sq. yd.</b> May be in basement/open basement with proper light, ventilation &amp; hygiene; servant entry from rear/side allowed; 3′ visual barrier required in front of servant rooms.</td></tr>
+  <tr><td class="l"><b>Boundary wall</b></td><td class="l">Height <b>max 7′-0″, min 3′-0″</b>. Solid wall, or solid masonry up to one foot with light material (fence etc.) above — as printed in Reg. 4.1.1. Must be on the <b>plot line</b> (§13).</td></tr>
+  <tr><td class="l"><b>Party / common walls</b></td><td class="l"><b>Common wall not allowed.</b> A neighbour may not use your wall without your <b>written consent</b> filed with CDA. Demolishing attached structures needs <b>prior approval + neighbour NOC or bank guarantee</b> (up to Rs 150k–300k+ per side); demolition without approval draws fines (residential: Rs 50k–150k by plot size).</td></tr>
+  <tr><td class="l"><b>Trees (mandatory practice)</b></td><td class="l">Plant/protect/maintain in the <b>street green belt</b>: frontage ≤29′ → <b>1</b> · 30–50′ → <b>2</b> · 51–70′ → <b>3</b> · 71–90′ → <b>4</b> · &gt;90′ → <b>5</b> (species per Landscape Unit). Creepers/shrubs on front wall encouraged. <b>No tree cutting without Authority permission.</b> Trees must be shown on floor plans.</td></tr>
+  <tr><td class="l"><b>Rainwater harvesting</b></td><td class="l"><b>Mandatory on plots ≥400 sq. yd.</b> Overhead + underground tanks of approved design/capacity, shown on submission drawings. All underground tanks must be <b>leak-proof</b>.</td></tr>
+  <tr><td class="l"><b>Water tanks on roof</b></td><td class="l">Suitably designed, <b>not prominently visible</b> from front/side road. Tank height excluded from building height.</td></tr>
+  <tr><td class="l"><b>Swimming / decorative pools, fountains</b></td><td class="l">Allowed only with <b>prior Authority permission</b>, subject to water availability.</td></tr>
+  <tr><td class="l"><b>Septic tanks</b></td><td class="l"><b>Prohibited on all plots.</b> Sewerage must connect to CDA mains (mechanical lifting from basements).</td></tr>
+  <tr><td class="l"><b>Parapet</b></td><td class="l"><b>3′-0″ parapet/railing compulsory</b> on accessible roofs. Excluded from height.</td></tr>
+  <tr><td class="l"><b>Roof structures</b></td><td class="l">Only: chimneys/ducts/vents, suitably-designed tanks, TV/radio antennas, 3′ parapet, mumty per Schedule-1, lift rooms/skylights/cooling towers, Authority-permitted items. <b>No mobile-phone antennas</b> on dwelling houses.</td></tr>
+  <tr><td class="l"><b>Two buildings, one plot</b></td><td class="l">Parallel buildings overlapping ≤12′ → min <b>6′ apart</b> (3′+3′); overlap &gt;12′ → min <b>10′ apart</b> (5′+5′).</td></tr>
+  <tr><td class="l"><b>Home occupation</b></td><td class="l">Resident professionals (doctor, lawyer, architect, engineer…) may use <b>≤2 rooms / ≤25% of covered area</b> with <b>yearly CDA permission</b> @ <b>Rs 50,000/year</b>; residential character unchanged; no nuisance to neighbours.</td></tr>
+  <tr><td class="l"><b>Non-conforming use</b></td><td class="l">Using plot/building for a non-allotted purpose → <b>penalty, eviction, possible cancellation</b> of allotment/conveyance. Change of land use only if the layout/functional plan permits.</td></tr>
+</table></div>
+
+<!-- ================= S13 ================= -->
+<h2 class="sec" id="s13"><span class="num">13</span> Extra / adjoining / excess land — the rules</h2>
+<p class="lede">The 2020 Building Control Regulations contain <b>no separate “extra land” chapter</b> — but several binding rules govern every kind of land beyond your allotted plot. They boil down to one principle: <b>you may build only inside your demarcated plot; everything outside it belongs to CDA/the state.</b></p>
+<div class="cards">
+  <div class="card top"><h4>1️⃣ Build only inside your plot line</h4>
+    <p>Plans must mark the <b>property/boundary line on every floor plan</b> (basement, GF, FF, mumty). Setbacks are measured from the plot line; the boundary wall stands <b>on</b> the plot line — not beyond it. Any structure outside = encroachment, liable to removal.</p></div>
+  <div class="card top"><h4>2️⃣ “Excess area” inside your plot</h4>
+    <p>If demarcation shows your plot physically measures <b>more than the allotted area</b>, the excess must be <b>regularized and paid for through the CDA Estate Wing</b> (at the prevailing schedule) <b>before</b> your building plan can be approved. Get demarcation done first; confirm current rates at the One Window Operation.</p></div>
+  <div class="card top"><h4>3️⃣ Adjoining open / green / nullah land</h4>
+    <p>Green belts, road berms, nullah edges, parks and vacant CDA strips next to (especially corner) houses are <b>state land</b>: no construction, no boundary-wall extension, no permanent enclosure, no services on it. CDA removes encroachments at the owner's risk and cost — and courts have barred carving private plots out of greenbelts/open spaces (IHC, Aug 2024).</p></div>
+  <div class="card top"><h4>4️⃣ The benefit you CAN take</h4>
+    <p>A side facing an <b>open space/nullah (not a road)</b> earns up to <b>50% relaxation of that side's setback</b> (§8.1) — the Regulations' formal way of rewarding open surroundings instead of occupying them.</p></div>
+  <div class="card top"><h4>5️⃣ Corner plots</h4>
+    <p>A plot is a “corner plot” only if <b>declared so by CDA</b> (intersection of two vehicular streets). Either street may count as the front. Corner location carries <b>premium/location charges</b> at allotment/transfer per CDA's schedule; in return, plots &gt;300 sq. yd. get the <b>extra 150 sft rear porch</b> (§9.1).</p></div>
+  <div class="card top"><h4>6️⃣ Street green belt &amp; trees</h4>
+    <p>You must <b>plant and maintain 1–5 trees</b> in the green belt along the street (§12) — but this gives <b>no ownership or enclosure rights</b>; the belt stays public, and no tree may be cut without permission.</p></div>
+</div>
+<div class="call warn"><b class="t">⛔ Common expensive mistakes</b>
+Extending the lawn/boundary over adjoining CDA land · building a guard room, generator room or ramp on the berm · assuming a “private” side strip is yours because you maintain it · buying a plot assuming the empty land beside it can be merged without CDA disposal/allotment. All are encroachments: CDA can reclaim the land and demolish the structure. <b>Verify plot boundaries by official demarcation (Amin report) before purchase and before design.</b></div>
+
+<!-- ================= S14 ================= -->
+<h2 class="sec" id="s14"><span class="num">14</span> Approval → construction → completion &amp; penalties</h2>
+<h3>14.1 Process at a glance</h3>
+<figure class="fig">
+<svg viewBox="0 0 860 170" role="img" aria-label="Approval process flowchart">
+  <g font-size="12.5" font-weight="700" text-anchor="middle">
+    <rect x="10" y="40" width="150" height="80" rx="10" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+    <text x="85" y="66" fill="#073d2a">1. Hire PCATP</text><text x="85" y="83" fill="#073d2a">architect (CDA-</text><text x="85" y="100" fill="#073d2a">licensed) + PEC</text>
+    <rect x="182" y="40" width="150" height="80" rx="10" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+    <text x="257" y="66" fill="#073d2a">2. Submit plans</text><text x="257" y="83" fill="#073d2a">+ docs + fee to</text><text x="257" y="100" fill="#073d2a">One Window</text>
+    <rect x="354" y="40" width="150" height="80" rx="10" fill="#faf3dd" stroke="#c9a227" stroke-width="2"/>
+    <text x="429" y="66" fill="#4d3d05">3. CDA decision</text><text x="429" y="83" fill="#4d3d05">within 21 days</text><text x="429" y="100" fill="#4d3d05">(valid 5 years)</text>
+    <rect x="526" y="40" width="150" height="80" rx="10" fill="#e8f1fb" stroke="#0b5cad" stroke-width="2"/>
+    <text x="601" y="66" fill="#0b3a6b">4. Build with</text><text x="601" y="83" fill="#0b3a6b">stage-wise</text><text x="601" y="100" fill="#0b3a6b">inspections</text>
+    <rect x="698" y="40" width="152" height="80" rx="10" fill="#e7f4ec" stroke="#0b5c3f" stroke-width="2"/>
+    <text x="774" y="66" fill="#073d2a">5. Completion</text><text x="774" y="83" fill="#073d2a">certificate →</text><text x="774" y="100" fill="#073d2a">then occupy</text>
+  </g>
+  <g fill="#0b5c3f" font-size="20" font-weight="800">
+    <text x="168" y="88">›</text><text x="340" y="88">›</text><text x="512" y="88">›</text><text x="684" y="88">›</text>
+  </g>
+  <text x="430" y="148" text-anchor="middle" font-size="12.5" fill="#b3261e" font-weight="700">No excavation before approval · approved plans displayed at site · no occupation before completion certificate</text>
+</svg>
+<figcaption><b>Figure 7 —</b> The five-gate process. Skipping any gate (building without approval, occupying without completion) triggers fines and demolition powers.</figcaption>
+</figure>
+<h3>14.2 Submissions, inspections, site discipline</h3>
+<ul style="font-size:15px">
+  <li><b>Drawings:</b> block plans of basement/GF/FF/mumty, front + rear elevations, horizontal + vertical sections (≥1 through stairs), boundary-wall plan/elevation, key plan, north arrow, grating details, area schedule/FAR table, plinth &amp; all levels vs road, stair steps with tread/riser, trees on plans, mechanical disposal for basements — signed by owner, CDA-registered architect &amp; structural engineer (forms A1/A2; B1/B2 at completion; structural calculations + soil report for &gt;500 sq. yd. residential).</li>
+  <li><b>Mandatory architect inspections</b> (reported to One Window within 7 days): ground demarcation → basement foundation → basement roof → DPC incl. boundary wall → GF roof → FF roof → subsequent floors → water tank/mumty → completion.</li>
+  <li><b>Site discipline:</b> construction Mon–Fri/Sat 8am–5pm (Sat from 9am), no Sundays, holidays only with permission; minimize noise/air pollution; copy of approved plans + approval letter displayed prominently; <b>no excavation before formal approval</b>.</li>
+</ul>
+<h3>14.3 Fees &amp; fines (confirm current schedule at CDA — rates are revised)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Head</th><th class="l">Amount / rule</th></tr>
+  <tr><td class="l"><b>Scrutiny fee</b></td><td class="l"><b>Rs 6/sft</b> of total covered area (residential; incl. basement for fee purposes) · Rs 20/sft commercial. Completion scrutiny fee = same again. <b>Double fee</b> if completion deviates &gt;15% from approval.</td></tr>
+  <tr><td class="l"><b>Occupying without completion certificate</b></td><td class="l"><b>Rs 50,000/year</b> (residential) · Rs 100,000/year (others). Apply within 3 months of construction-period expiry.</td></tr>
+  <tr><td class="l"><b>Unauthorized construction</b></td><td class="l">Liable to <b>removal/demolition at owner risk + cost</b>, with or without notice; 15-day notice for non-conforming construction.</td></tr>
+  <tr><td class="l"><b>Compounding</b></td><td class="l">Only deviations <b>≤5% with prior approval</b> may be compounded. Excess covered area, excess projections, structures in setbacks, habitable space under porch, over-wide mumty → <b>demolition</b>.</td></tr>
+  <tr><td class="l"><b>Space-standard shortfalls</b></td><td class="l">Up to <b>10%</b> relaxable <b>with penalty</b> (§10). OTS/ventilation wells &lt;50 sft, over-limit projections, &gt;15% plan deviations → heavy fines.</td></tr>
+</table></div>
+
+<!-- ================= S15 ================= -->
+<h2 class="sec" id="s15"><span class="num">15</span> Pre-submission design checklist</h2>
+<ul class="check">
+  <li>Plot size, frontage, dimensions &amp; orientation taken from allotment letter + fresh demarcation (no assumed “extra” land).</li>
+  <li>Correct Master-Table row applied using <b>size + frontage</b>; irregular-plot averaging done if needed.</li>
+  <li>Buildable block = plot minus <b>all</b> setbacks; smaller side setback on <b>south/west</b>; GF &amp; FF inside block.</li>
+  <li>Only <b>2 storeys</b>; height ≤ <b>30′</b> from mean road level; reads as 2-storey from front; plinth ≤ 3′-6″/5′-0″.</li>
+  <li>Mumty ≤ <b>¼ GF block</b> (≤600 sft detached); width ≤ <b>½ / ⅓</b> plot width; depth &gt; width; ≤10′ high; <b>stair + 1 room + 1 bath only</b>; no kitchen/unit.</li>
+  <li>Basement under plinth area only, setbacks left; 5′ neighbour offset or NOCs for terraced; 8′-6″–12′ clear; mechanical sewage + storm disposal; 3′×3′ emergency exit.</li>
+  <li>Porch within area + ⅔-setback + length caps; open sides correct; no habitation under it; drainage inside plot.</li>
+  <li>All projections ≤ Schedule-3/4 limits and ≤ ½ setback width; balcony/bay-window/pergola/open-stair rules met.</li>
+  <li>All rooms meet Schedule-2 minima (100/45/24 sft…); doors 7′; basement habitation compliant; OTS ≥50 sft.</li>
+  <li>Units ≤ 1 (&lt;488) / 2 (≥488); servant room + bath if ≥501 sq. yd.; home office ≤2 rooms/25% with permission.</li>
+  <li>Boundary wall 3′–7′ on plot line; parapet 3′; tanks set back &amp; unobtrusive; no mobile antenna; pools only if permitted.</li>
+  <li>Rainwater harvesting shown (≥400 sq. yd.); trees 1–5 per frontage on plans; sewer + storm connections to CDA mains.</li>
+  <li>Nothing outside the plot line; setback-facing-open-space relaxation claimed formally if applicable.</li>
+  <li>Drawings complete (plans/sections/elevations/schedules/levels/stairs/trees/disposal), signed &amp; stamped; fees ready; neighbour NOCs / bank guarantees where triggered.</li>
+</ul>
+
+<!-- ================= S16 ================= -->
+<h2 class="sec" id="s16"><span class="num">16</span> Farmhouses in CDA-approved farm housing schemes (Zone II / IV / V)</h2>
+<p class="lede">Reg. §8.21 — a <b>separate regime</b> from sector houses: percentage-based coverage (20% per floor), very large setbacks, and landscape/fencing controls. Minimum plot: <b>4 kanals</b>.</p>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:28%">Parameter</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Floors</b></td><td class="l"><b>Basement + Ground + First</b> (B+G+1). No further storeys.</td></tr>
+  <tr><td class="l"><b>Coverage</b></td><td class="l"><b>20% of total plot area on EACH floor</b> — basement, ground and first alike. (Both this cap <i>and</i> the setback-built block apply; whichever binds, governs.)</td></tr>
+  <tr><td class="l"><b>Setbacks</b></td><td class="l"><b>Front 75′ · Sides 15′ · Rear 30′.</b></td></tr>
+  <tr><td class="l"><b>Mumty</b></td><td class="l"><b>450 sft</b> fixed cap (width/height/room rules of §6 apply).</td></tr>
+  <tr><td class="l"><b>Residential units</b></td><td class="l"><b>Maximum 2.</b></td></tr>
+  <tr><td class="l"><b>Servant quarter</b></td><td class="l"><b>Minimum 140 sft with bath.</b></td></tr>
+  <tr><td class="l"><b>Guard room</b></td><td class="l"><b>140 sft</b>, adjacent to the gates.</td></tr>
+  <tr><td class="l"><b>Porch</b></td><td class="l">Allowed <b>50% in side setback + 10′ in front setback</b> — and <b>counted in covered area</b>. Corner plots: 1 porch from the corner side.</td></tr>
+  <tr><td class="l"><b>Gates</b></td><td class="l"><b>2 gates</b> allowed on plots of <b>10 kanals and above</b>.</td></tr>
+  <tr><td class="l"><b>Fence (no boundary wall)</b></td><td class="l"><b>See-through fence up to 7′-0″</b> with solid portion at the bottom — solid boundary walls are not in the spirit of farm schemes.</td></tr>
+  <tr><td class="l"><b>Landscape</b></td><td class="l"><b>50% of open area</b> must be <b>soft landscape</b>.</td></tr>
+  <tr><td class="l"><b>Rainwater harvesting</b></td><td class="l"><b>Mandatory.</b></td></tr>
+  <tr><td class="l"><b>Swimming pool</b></td><td class="l"><b>Allowed</b> — water management is the owner's responsibility.</td></tr>
+</table></div>
+<div class="call tip"><b class="t">💡 Worked example — 4-kanal farm (min. size)</b>
+4 kanal = 2,420 sq. yd. = <b>21,780 sft</b> → 20% = <b>4,356 sft per floor</b> (basement + ground + first). Total roofed ≈ 4,356 (GF) + 4,356 (FF) + 450 (mumty) = <b>≈ 9,162 sft</b> + 140 sft guard room. On a square-ish plot (≈147′ × 148′), setbacks leave ≈117′ × 43′ ≈ 5,031 sft — so the <b>20% cap binds</b>, not the setbacks. On narrow/deep shapes, check both.</div>
+
+<figure class="fig">
+<svg viewBox="0 0 860 240" role="img" aria-label="Farmhouse coverage diagram">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">4-kanal farm — where the 21,780 sft goes (to scale)</text>
+  <rect x="60" y="48" width="740" height="120" rx="8" fill="#f2f7f4" stroke="#073d2a" stroke-width="2"/>
+  <rect x="60" y="48" width="148" height="120" fill="#0b5c3f"/>
+  <rect x="208" y="48" width="148" height="120" fill="#2e9e6b"/>
+  <rect x="356" y="48" width="148" height="120" fill="#7cc9a0"/>
+  <rect x="504" y="48" width="296" height="120" fill="#e7f4ec"/>
+  <g font-size="12.5" font-weight="700" text-anchor="middle" fill="#fff">
+    <text x="134" y="98">GF 20%</text><text x="134" y="116" font-size="11">4,356 sft</text>
+    <text x="282" y="98">FF 20%</text><text x="282" y="116" font-size="11">4,356 sft</text>
+  </g>
+  <text x="430" y="98" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">Basement 20%</text>
+  <text x="430" y="116" text-anchor="middle" font-size="11" fill="#073d2a">4,356 sft</text>
+  <text x="652" y="98" text-anchor="middle" font-size="12.5" font-weight="700" fill="#073d2a">Open ≈40%+</text>
+  <text x="652" y="116" text-anchor="middle" font-size="11" fill="#073d2a">½ of it soft landscape</text>
+  <text x="430" y="196" text-anchor="middle" font-size="12.5" fill="#5b6b62">+ 450 sft mumty on roof · + 140 sft guard room · setbacks F75 / S15 / R30 carve the siting block · max 2 units</text>
+  <text x="430" y="216" text-anchor="middle" font-size="12.5" fill="#b3261e" font-weight="700">20% × 3 floors + mumty + guard + porch (counted) — everything inside the 75′/15′/30′ setbacks</text>
+</svg>
+<figcaption><b>Figure 8 —</b> Farmhouses are capped by <b>percentage (20% × 3)</b>, unlike sector houses which build to setbacks. Always test both constraints.</figcaption>
+</figure>
+
+<!-- ================= S17 ================= -->
+<h2 class="sec" id="s17"><span class="num">17</span> Agro / orchard / poultry-vegetable farms (Zone IV)</h2>
+<p class="lede">Reg. §8.15 — these are <b>production leases</b>, not residential plots. Construction is capped at <b>9,500 sft total</b> in a fixed functional break-up, 80% of land must farm, and the sub-division position has changed twice — read carefully.</p>
+<h3>17.1 The 9,500 sft fixed break-up (building zone ≤10% of plot)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Building (within non-production zone)</th><th>Max covered area</th></tr>
+  <tr><td class="l">Guard room (single storey)</td><td>100 sft</td></tr>
+  <tr><td class="l">Barn — tractor/trolley/equipment store (single storey, max 16′ ceiling)</td><td>500 sft</td></tr>
+  <tr><td class="l">Servant block (single storey)</td><td>500 sft</td></tr>
+  <tr><td class="l">Kitchen / canteen with toilets (single storey)</td><td>900 sft</td></tr>
+  <tr><td class="l">Office block (double storey)</td><td>1,000 sft</td></tr>
+  <tr><td class="l">Manager's residence (double storey)</td><td>6,500 sft</td></tr>
+  <tr><td class="l"><b>Total</b></td><td><b>9,500 sft</b></td></tr>
+</table></div>
+<div class="call note"><b class="t">📌 Compoundable excess (per CDA enforcement practice)</b>
+CDA's practice: construction from <b>9,501 to ≈12,500 sft</b> (≈3,000 sft extra) may be <b>regularized on payment of prescribed charges</b>; anything <b>beyond ≈12,500 sft must be demolished</b>. Confirm the current compounding rate before relying on it.</div>
+<h3>17.2 Production obligations (part of the lease — enforceable)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Obligation</th><th class="l">Standard</th></tr>
+  <tr><td class="l"><b>Active farming area</b></td><td class="l"><b>≥80% of land</b> under active farming/cultivation at all times.</td></tr>
+  <tr><td class="l"><b>Orchards</b></td><td class="l"><b>150 fruit trees per acre</b>; 50% plantation within 12 months; project complete in 2 years; <b>production within 5 years</b> of possession.</td></tr>
+  <tr><td class="l"><b>Poultry + vegetables</b></td><td class="l"><b>80% intensive vegetable cultivation</b>; <b>4,500 broilers/month + 9,000 layers producing 5,000 eggs/day</b>; 50% production within 12 months; complete in 3 years. Produce to reach city markets (e.g. weekly bazaars).</td></tr>
+  <tr><td class="l"><b>Basement / fence</b></td><td class="l">Basement allowed under plinth. <b>No boundary wall of any type</b> — only a <b>dwarf see-through fence</b> at periphery and inside.</td></tr>
+  <tr><td class="l"><b>Use restrictions</b></td><td class="l"><b>No commercial activity, no subletting/renting</b> of any part. Only <b>change of trade</b> among the three agro categories is allowed (prescribed charges + prior approval).</td></tr>
+</table></div>
+<h3>17.3 Sub-division saga — current status: BARRED</h3>
+<div class="call warn"><b class="t">⛔ Do not buy half a farm without reading this</b>
+<b>2020 Regulations:</b> “No sub-division and amalgamation shall be allowed.” &nbsp;<b>Aug 2023:</b> an amendment appeared to allow <b>one</b> sub-division of 5-acre plots into 2 × 2.5 acres (coverage split 4,750/4,750, no increase). &nbsp;<b>Oct 2024:</b> the CDA Board ruled there was <b>no provision for sub-division of agro farms in any scheme</b>, barred it, and ordered an inquiry into the 2023 change. <b>Current position: sub-division barred.</b> ~150 of ~550 farms were sub-divided historically — their status is case-by-case. Verify the individual farm's record at CDA before any transaction.</div>
+
+<!-- ================= S18 ================= -->
+<h2 class="sec" id="s18"><span class="num">18</span> Unplanned houses in Zone II / IV / V (Table-1)</h2>
+<p class="lede">Reg. §8.22 — for houses on <b>private land outside any housing scheme</b> where construction is permitted (and for regularizing pre-2020 construction there). Simpler marla-based table with <b>fixed mumty/porch caps</b> instead of the ¼-GF formula. The <b>Plot Design Calculator</b> computes these too.</p>
+<div class="tbl-wrap"><table>
+  <tr><th>Plot size</th><th>Front</th><th>Rear</th><th>Side-1</th><th>Side-2</th><th>Max porch</th><th>Max mumty</th><th>Basement</th><th>Max plinth</th></tr>
+  <tr><td>Up to 5 marlas</td><td>5′</td><td>5′</td><td>Nil</td><td>Nil</td><td>100 sft</td><td><b>200 sft</b></td><td rowspan="5">Allowed leaving setbacks</td><td>3′-6″</td></tr>
+  <tr><td>Up to 10 marlas</td><td>8′</td><td>8′</td><td>5′</td><td>Nil</td><td>180 sft</td><td><b>350 sft</b></td><td>3′-6″</td></tr>
+  <tr><td>Up to 15 marlas</td><td>10′</td><td>8′</td><td>5′</td><td>Nil</td><td>200 sft</td><td><b>350 sft</b></td><td>3′-6″</td></tr>
+  <tr><td>Up to 1 kanal</td><td>10′</td><td>8′</td><td>5′</td><td>5′</td><td>300 sft</td><td><b>400 sft</b></td><td>5′-0″</td></tr>
+  <tr><td>More than 1 kanal</td><td>15′</td><td>10′</td><td>5′</td><td>10′</td><td>300 sft</td><td><b>400 sft</b></td><td>5′-0″</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:30%">Additional rule</th><th class="l">Detail</th></tr>
+  <tr><td class="l"><b>Street width</b></td><td class="l">Minimum <b>30′ street</b>. If narrower, leave land from your plot line so <b>15′ (50% of road)</b> is available from the centreline.</td></tr>
+  <tr><td class="l"><b>Regularization fees</b></td><td class="l"><b>Scrutiny Rs 6/sft + regularization Rs 100/sft</b> of covered area, plus <b>land-conversion charges</b> and an undertaking to pay conversion/development charges when demanded.</td></tr>
+  <tr><td class="l"><b>Documents</b></td><td class="l">CNIC, authority letter, <b>Fard + Aks Shajra</b> (Tehsildar) with site superimposed on khasra plan, <b>non-encumbrance certificate</b>, access/site plan from revenue road, forms <b>A-1/A-II</b>, indemnity bond, <b>PCATP/CDA-architect plans + structural design &amp; stability certificate</b>, sewage &amp; solid-waste disposal plan.</td></tr>
+  <tr><td class="l"><b>Pre-2020 structures</b></td><td class="l">Must be brought into compliance (covered area, height, storeys, 15′ plot line from street centreline); missing setbacks → either <b>demolish the encroaching part or pay penalty</b>.</td></tr>
+  <tr><td class="l"><b>Nullah-side plots</b></td><td class="l">Windows/shades may open toward nullah/broken land — but the <b>land between plot and nullah cannot be used in planning the plot</b>.</td></tr>
+  <tr><td class="l"><b>Smaller side setback</b></td><td class="l">On <b>south or west</b>, as in sectors. Sewerage/drainage disposal plan mandatory (interim in-plot tanks + undertaking if no CDA system).</td></tr>
+</table></div>
+
+<!-- ================= S19 ================= -->
+<h2 class="sec" id="s19"><span class="num">19</span> Apartment buildings — parameters</h2>
+<p class="lede">Two overlapping regimes apply — <b>Schedule-1 Types A/B</b> (general apartment plots) and <b>§8.20</b> (apartment buildings in CDA sectors / cooperative &amp; private schemes on CDA-approved sites). Where they differ, confirm applicability — flagged below.</p>
+<h3>19.1 Schedule-1 apartment plots</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l">Parameter</th><th>Type 'A' (up to ≈2.0 acres)</th><th>Type 'B' (more than 2.0 acres)</th></tr>
+  <tr><td class="l"><b>Max ground coverage</b></td><td>50%</td><td>50%</td></tr>
+  <tr><td class="l"><b>Max FAR</b></td><td><b>1:3</b></td><td><b>1:4</b></td></tr>
+  <tr><td class="l"><b>Storeys / height</b></td><td colspan="2"><b>Flexible</b> (subject to CAA/PAF NOC — §8.20)</td></tr>
+  <tr><td class="l"><b>Setbacks F / S1 / S2 / R</b></td><td>80′ / 30′ / 30′ / 40′</td><td>80′ / 35′ / 35′ / 40′</td></tr>
+  <tr><td class="l"><b>Roof structures (stair towers + tanks + cooling + penthouse)</b></td><td><b>3,000 sft</b></td><td><b>4,000 sft</b></td></tr>
+  <tr><td class="l"><b>Plinth</b></td><td>5′-0″</td><td>5′-0″</td></tr>
+</table></div>
+<h3>19.2 §8.20 — apartment buildings in CDA sectors / schemes (CDA-approved sites)</h3>
+<div class="tbl-wrap"><table>
+  <tr><th class="l" style="width:30%">Parameter</th><th class="l">Rule</th></tr>
+  <tr><td class="l"><b>Min plot / FAR / coverage</b></td><td class="l"><b>Min 4 kanals · FAR 1:5 · ground coverage 50%</b> (coverage relaxable up to 5% on payment: 1st 2.5% @ Rs 100/sft, next @ Rs 200/sft — confirm current rates).</td></tr>
+  <tr><td class="l"><b>Block spacing / internal road</b></td><td class="l">Min <b>30′ between blocks</b>; min <b>50′ internal road</b> width.</td></tr>
+  <tr><td class="l"><b>Height</b></td><td class="l">Flexible, subject to <b>CAA/PAF NOC</b>. Structure designed &amp; vetted by licensed engineer per Building Code; <b>fire safety per Building Code of Pakistan (Fire Safety Provisions 2016)</b>.</td></tr>
+  <tr><td class="l"><b>Basement</b></td><td class="l"><b>No residential use</b> — stores, air-raid shelter, chowkidar room and <b>car parking only</b>. 10′ setbacks all around; ramps allowed in setbacks <b>except front</b>.</td></tr>
+  <tr><td class="l"><b>Parking</b></td><td class="l">Min <b>1 car space per 1,000 sft of covered area (excl. basement)</b>, @ <b>250 sft per car incl. circulation</b>, all <b>within the plot line</b> including basements. <i>Example: 20,000 sft block → 20 cars → 5,000 sft parking.</i></td></tr>
+  <tr><td class="l"><b>Amenities</b></td><td class="l">Prayer hall, café, gym, multipurpose hall, pool etc. ≤ <b>5% of FAR</b> and <b>counted in FAR</b>.</td></tr>
+  <tr><td class="l"><b>Rooftop</b></td><td class="l">Stair towers + tanks + cooling tower + penthouse/viewing gallery allowed; all roof structures ≤ <b>15% of rooftop</b> (§8.20) — but Schedule-1 Note (ix) says <b>10%</b> and limits penthouses to <b>6+ storey</b> buildings. <b>Confirm which cap your site follows; design to 10% to be safe.</b></td></tr>
+  <tr><td class="l"><b>Servant quarters</b></td><td class="l"><b>Mandatory with every flat of 2+ bedrooms</b> (Reg. 2.10.2). Min living unit 600 sft excl. stairs (§10).</td></tr>
+  <tr><td class="l"><b>Roof ownership</b></td><td class="l"><b>85% joint property of all owners</b> (by share) + <b>15% of top-floor owners</b>; accessible to all; <b>never developer-owned</b>. All services accessible to all occupants at all times.</td></tr>
+</table></div>
+<div class="call warn"><b class="t">⚠️ Regime overlaps to clarify with CDA</b>
+<b>FAR 1:3/1:4</b> (Schedule-1 A/B) vs <b>1:5</b> (§8.20) · <b>rooftop 10%</b> vs <b>15%</b> · <b>penthouse only 6+ storeys</b> vs generally allowed. These reflect different approval vintages/site types — your allotment letter + CDA's site-specific approval states which applies. Auctioned plots may attract extra fees/fines for enhancements.</div>
+
+<figure class="fig">
+<svg viewBox="0 0 860 250" role="img" aria-label="Apartment FAR and parking diagram">
+  <text x="430" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="#073d2a">Apartments — FAR and parking logic (§8.20 site, FAR 1:5, coverage 50%)</text>
+  <rect x="70" y="50" width="330" height="130" rx="8" fill="#f2f7f4" stroke="#073d2a" stroke-width="2"/>
+  <text x="235" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#073d2a">EXAMPLE: 4-kanal site = 21,780 sft</text>
+  <rect x="90" y="86" width="290" height="34" rx="4" fill="#0b5c3f"/>
+  <text x="235" y="108" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">Footprint ≤ 50% = 10,890 sft</text>
+  <rect x="90" y="128" width="290" height="34" rx="4" fill="#c9a227"/>
+  <text x="235" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#20301f">Total floor area ≤ 5× = 108,900 sft</text>
+  <text x="235" y="170" text-anchor="middle" font-size="11.5" fill="#5b6b62">storeys flexible (CAA/PAF NOC) · 30′ block gap · 50′ road</text>
+  <rect x="460" y="50" width="330" height="130" rx="8" fill="#f2f7f4" stroke="#073d2a" stroke-width="2"/>
+  <text x="625" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#073d2a">PARKING from the same example</text>
+  <rect x="480" y="86" width="290" height="34" rx="4" fill="#0b5cad"/>
+  <text x="625" y="108" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">108,900 ÷ 1,000 ≈ 109 cars</text>
+  <rect x="480" y="128" width="290" height="34" rx="4" fill="#7fb3e0"/>
+  <text x="625" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0b3a6b">109 × 250 sft ≈ 27,250 sft parking</text>
+  <text x="625" y="170" text-anchor="middle" font-size="11.5" fill="#5b6b62">within plot · incl. basements · + ramps (not in front)</text>
+  <text x="430" y="208" text-anchor="middle" font-size="12.5" fill="#5b6b62">Amenities ≤ 5% of FAR (counted) · basement non-residential · rooftop structures ≤ 10–15% (confirm) · servant quarter per 2+ bed flat</text>
+  <text x="430" y="228" text-anchor="middle" font-size="12.5" fill="#b3261e" font-weight="700">Schedule-1 Type A/B sites instead use FAR 1:3 / 1:4 with 80′/30–35′/40′ setbacks — check your allotment</text>
+</svg>
+<figcaption><b>Figure 9 —</b> How FAR converts to floors and how floors convert to parking. Parking is often the binding constraint — test it before fixing unit count.</figcaption>
+</figure>
+
+<!-- ================= S20 ================= -->
+<h2 class="sec" id="s20"><span class="num">20</span> Sources &amp; disclaimer</h2>
+<p style="font-size:14.5px">This guide consolidates the residential-house provisions of the <b>ICT Residential Sectors Zoning (Building Control) Regulations 2020</b> (S.R.O. 1575(I)/2019, Gazette of Pakistan Extraordinary, 26-12-2019) — Schedules 1–4 and Chapter 2/4 provisions — cross-checked against CDA/FGEHA guidance and press reporting of amendments. Key sources:</p>
+<ol style="font-size:14px">
+  <li>Gazette notification S.R.O. 1575(I)/2019 (full 120-page regulations incl. Schedule-1 zoning table, Schedules 2–4, basement, porch, sub-division, miscellaneous clauses). Copy saved alongside this guide: <i>ICT-Building-Control-Regulations-2020-source.pdf</i>.</li>
+  <li>FGEHA Planning/Building Control guidance (submission requirements, scrutiny fee Rs 6/sft residential, common observations, demolition triggers).</li>
+  <li>Press record: 2020 by-laws notification (Dawn, Jan 2020 — incl. ¼-GF mumty rule); 2024 commercial-FAR amendments (The News, Apr 2024); IHC greenbelt judgment (Dawn, Aug 2024); 2026 rooftop-commercial enforcement drive (ProPakistani).</li>
+  <li>Pre-2020 Schedule-A/B tables (background comparison only — superseded).</li>
+  <li>Farm &amp; apartment chapters: Reg. §8.15 (agro farms), §8.20 (apartments in sectors/schemes), §8.21 (farmhouses in approved schemes), §8.22 + Table-1 (unplanned Zone II/IV/V) — same Gazette notification; press record on agro-farm subdivision (Dawn, Sep 2023 &amp; Oct 2024: currently barred) and 9,500 + ~3,000 sft enforcement practice (Dawn, May 2021).</li>
+  <li>Companion <b>Plot Design Calculator</b> (<i>calculator.html</i>) implementing Schedule-1 and §8.22 Table-1 — same folder as this guide.</li>
+</ol>
+<div class="call warn"><b class="t">⚖️ Disclaimer</b>
+This is a <b>design-reference consolidation, not legal advice</b>. CDA amends regulations, fees and procedures (notably 2023–2024 amendments); housing societies/DHA/Bahria under their own by-laws differ; and officers exercise case-by-case discretion (irregular plots, relaxations, sub-division). <b>Before committing design or money: (1)</b> confirm your plot's applicable Schedule-1 row, (2) confirm current fee/fine schedules, and (3) get all relaxations/NOCs <b>in writing</b> from CDA Building Control / Member (Planning &amp; Design) via the One Window Operation, Block-III, CDA Secretariat, Islamabad.</div>
+
+</div><!-- /content -->
+<footer>
+  <h3>CDA Islamabad — Residential Construction Rules · Reference Guide</h3>
+  <p>Compiled September 2026 from the ICT Building Control Regulations 2020 (S.R.O. 1575(I)/2019) and official guidance. For the authoritative text, consult the Gazette notification and CDA's Building &amp; Housing Control Wing. Pair this guide with the <a href="calculator.html">📐 Plot Design Calculator</a> — print either file or save as PDF for your project folder.</p>
+</footer>
+<a class="fab noprint" href="calculator.html" aria-label="Open the Plot Design Calculator">📐<span>Calculator</span></a>
+</div>
+</body>
+</html>
